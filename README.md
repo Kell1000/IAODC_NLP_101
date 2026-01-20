@@ -1,6 +1,6 @@
-# Kella | Intelligent E-Commerce Assistant
+# Kella.AI | Intelligent E-Commerce Assistant
 
-Kella is a high-performance shopping assistant engineered to streamline the online retail experience. Developed with a focus on modern web standards and machine learning, this project demonstrates the integration of a PyTorch-based NLP backend with a responsive, interactive frontend.
+Kella.AI is a high-performance shopping assistant engineered to streamline the online retail experience. Developed with a focus on modern web standards and machine learning, this project demonstrates the integration of a PyTorch-based NLP backend with a responsive, interactive frontend.
 
 ![Kella App Preview](static/images/app_preview.png)
 
