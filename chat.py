@@ -11,7 +11,7 @@ from nltk_utils import bag_of_words, tokenize
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # Load the intents JSON file which contains the training data and responses
-with open('ChatBot_based_on_NLP\intents.json', 'r') as json_data:
+with open('intents.json', 'r', encoding='utf-8') as json_data:
     intents = json.load(json_data)
 
 # Load the trained model data

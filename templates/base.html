@@ -1,115 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
 <head>
     <meta charset="UTF-8">
-    <title>Chatbot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Kella - Your AI-Powered Shopping Assistant. Experience the future of e-commerce with intelligent chat support.">
+    <title>Kella | AI Shopping Assistant</title>
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
-    <header>
+    <!-- ============================================
+         NAVBAR (New)
+         ============================================ -->
+    <nav class="navbar">
+        <div class="logo">Kella<span>.AI</span></div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#categories">Shop</a>
+            <a href="#about">About</a>
+        </div>
+        <div class="nav-actions">
+            <button class="icon-btn"><i class="fas fa-search"></i></button>
+            <button class="icon-btn"><i class="fas fa-shopping-bag"></i></button>
+            <button class="login-btn">Login</button>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
+    <header id="home">
         <div class="Kella">
+            <canvas id="hero-canvas"></canvas>
             <div id="imagePrincipale">
-                <h1>WELCOME HOME</h1>
+                <h1>✨ WELCOME TO KELLA.AI</h1>
                 <div id="premierTrait"></div>
-                <h3>YOU CAN ASK CHAT BELLOW</h3>
+                <h3>Your AI-Powered Shopping Experience</h3>
                 <div class="imagePrincipale">
-                    <button class="bttn">Create your store</button>
+                    <button class="bttn" onclick="document.querySelector('.chatbox__button button').click()">
+                        <i class="fas fa-comments"></i> Start Chatting
+                    </button>
+                    <button class="bttn bttn-secondary" href="#categories">
+                        <i class="fas fa-shopping-bag"></i> Browse Store
+                    </button>
                 </div>
             </div>
-
         </div>
-
-
     </header>
-    <section id="presentation">
-        <div id="texteIntro">
-            <h2>The simple way to tackle the complexity of selling online</h2>
-            <p>
-                L'information est un concept physique nouveau qui a surgi dans un champ technologique. Le concept théorique d'information a été introduit à partir de recherches théoriques sur les systèmes de télécommunication. L'origine de ces recherches remonte aux
-                études entreprises dès la fin du xixe siècle, en physique et en mathématique par Boltzmann et Markov sur la notion de probabilité d'un événement et les possibilités de mesure de cette probabilité. Plus récemment, avant la Seconde Guerre
-                mondiale, les contributions les plus importantes sont dues à la collaboration des mathématiciens et des ingénieurs des télécommunications, qui ont été amenés à envisager les propriétés théoriques de tout système de signaux utilisé par
-                les êtres, vivants ou techniques, à des fins de communication.
-            </p>
-        </div>
-        <div id="prestations">
-            <div class="imagesPrestations">
-                <h4>Boutiques en ligne exceptionnelles</h4>
-                <a href="#"><img src="static\media\dm.JPG" alt="dm"></a>
-                <p>
-                    Augmentez vos ventes et faites la promotion de votre marque avec des galeries ultra-design, des expériences d'achat optimisées et une suite d'applis professionnelles dédiées à l'eCommerce.
-                </p>
-            </div>
-            <div class="imagesPrestations">
-                <h4>Plateforme pour l'eCommerce</h4>
-                <a href="#"><img src="static\media\ch.jpg" alt="ch"></a>
-                <p> Vendez sur plusieurs canaux de vente, comme Facebook ou eBay, et gérez votre boutique à partir d'un tableau de bord intégré. Suivez toutes les étapes, des commandes aux paiements, en passant par l'expédition, l'exécution, le marketing,
-                    etc.
-                </p>
-            </div>
-            <div class="imagesPrestations">
-                <h4>Solutions de paiement avancées</h4>
-                <a href="#"><img src="static\media\AA.JPG" alt="AA"></a>
-                <p>
-                    Offrez à vos clients un paiement sécurisé et gérez toutes les transactions de manière transparente. Obtenez des taux de traitement compétitifs, personnalisez vos calendriers de paiement et travaillez avec des dizaines de fournisseurs de paiement.
-                </p>
-            </div>
+
+    <!-- ============================================
+         FEATURES SECTION
+         ============================================ -->
+    <section id="features">
+        <div class="section-header">
+            <h2>The Future of Online Shopping</h2>
+            <p>Experience seamless shopping with our AI-powered assistant.</p>
         </div>
 
+        <div id="prestations">
+            <!-- Feature 1: Online Shopping -->
+            <div class="imagesPrestations">
+                <h4><i class="fas fa-shopping-cart"></i> Smart Shopping</h4>
+                <img src="{{ url_for('static', filename='media/feature_shopping.png') }}" alt="Online Shopping">
+                <p>
+                    Browse our extensive catalog with AI-powered recommendations.
+                    Find products tailored to your preferences and discover amazing deals.
+                </p>
+            </div>
+
+            <!-- Feature 2: Secure Payments -->
+            <div class="imagesPrestations">
+                <h4><i class="fas fa-shield-alt"></i> Secure Payments</h4>
+                <img src="{{ url_for('static', filename='media/feature_payment.png') }}" alt="Secure Payment">
+                <p>
+                    Shop with confidence using our advanced security systems.
+                    Multiple payment options with encrypted transactions and buyer protection.
+                </p>
+            </div>
+
+            <!-- Feature 3: Fast Delivery -->
+            <div class="imagesPrestations">
+                <h4><i class="fas fa-truck"></i> Express Delivery</h4>
+                <img src="{{ url_for('static', filename='media/feature_delivery.png') }}" alt="Fast Delivery">
+                <p>
+                    Lightning-fast shipping to your doorstep.
+                    Track your orders in real-time and enjoy hassle-free returns.
+                </p>
+            </div>
+        </div>
     </section>
+
+    <!-- ============================================
+         CATEGORIES SECTION (New)
+         ============================================ -->
+    <section id="categories">
+        <div class="section-header">
+            <h2>Shop by Category</h2>
+            <p>Explore our curated collections across top categories.</p>
+        </div>
+
+        <div class="category-grid">
+            <div class="category-card">
+                <img src="{{ url_for('static', filename='media/cat_fashion.png') }}" alt="Fashion">
+                <div class="category-content">
+                    <h3>Fashion</h3>
+                    <p>Trending streetwear & runway looks</p>
+                    <a href="#" class="arrow-link">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="{{ url_for('static', filename='media/cat_electronics.png') }}" alt="Electronics">
+                <div class="category-content">
+                    <h3>Electronics</h3>
+                    <p>Next-gen gadgets & smart tech</p>
+                    <a href="#" class="arrow-link">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="{{ url_for('static', filename='media/cat_home.png') }}" alt="Home & Living">
+                <div class="category-content">
+                    <h3>Home & Living</h3>
+                    <p>Smart decor for modern spaces</p>
+                    <a href="#" class="arrow-link">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="{{ url_for('static', filename='media/cat_beauty.png') }}" alt="Beauty">
+                <div class="category-content">
+                    <h3>Beauty</h3>
+                    <p>Premium skincare & cosmetics</p>
+                    <a href="#" class="arrow-link">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="{{ url_for('static', filename='media/cat_sports.png') }}" alt="Sports">
+                <div class="category-content">
+                    <h3>Sports</h3>
+                    <p>High-performance gear</p>
+                    <a href="#" class="arrow-link">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         ABOUT SECTION (New)
+         ============================================ -->
+    <section id="about">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>Powered by Advanced AI</h2>
+                <div class="divider"></div>
+                <p>Kella isn't just a store—it's your intelligent shopping companion. Built on state-of-the-art natural
+                    language processing, Kella understands your needs, preferences, and style.</p>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>24/7</h3>
+                        <p>Support</p>
+                    </div>
+                    <div class="stat">
+                        <h3>50k+</h3>
+                        <p>Products</p>
+                    </div>
+                    <div class="stat">
+                        <h3>99%</h3>
+                        <p>Satisfaction</p>
+                    </div>
+                </div>
+                <button class="bttn">Learn More</button>
+            </div>
+            <div class="about-image">
+                <img src="{{ url_for('static', filename='media/about_ai.png') }}" alt="AI Technology">
+                <div class="floating-card c1"><i class="fas fa-brain"></i> Neural Processing</div>
+                <div class="floating-card c2"><i class="fas fa-bolt"></i> Real-time Answers</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         TESTIMONIALS (New)
+         ============================================ -->
+    <section id="testimonials">
+        <div class="section-header">
+            <h2>What Our Users Say</h2>
+        </div>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Kella found me the perfect outfit for my event in seconds. It actually understood exactly what I was
+                    looking for!"</p>
+                <div class="user">
+                    <div class="avatar" style="background: #a78bfa">JS</div>
+                    <div>
+                        <h5>Jessica S.</h5>
+                        <small>Verified Buyer</small>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"The best shopping experience I've ever had. The AI suggestions were spot on and shipping was
+                    incredibly fast."</p>
+                <div class="user">
+                    <div class="avatar" style="background: #60a5fa">MR</div>
+                    <div>
+                        <h5>Michael R.</h5>
+                        <small>Tech Enthusiast</small>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"I love how easy it is to track orders and process returns just by chatting. Kella makes everything
+                    stress-free."</p>
+                <div class="user">
+                    <div class="avatar" style="background: #f472b6">EL</div>
+                    <div>
+                        <h5>Emma L.</h5>
+                        <small>Fashion Blogger</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         NEWSLETTER (New)
+         ============================================ -->
+    <section id="newsletter">
+        <div class="newsletter-content">
+            <h2>Stay Ahead of the Trends</h2>
+            <p>Join our community for exclusive access to AI-curated drops, member-only sales, and the latest tech news.
+            </p>
+            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
     <footer>
         <div id="deuxiemeTrait"></div>
         <div id="copyrightEtIcons">
             <div id="copyright">
-                <span>©OMAR_KELLA; 2023</span>
-                <span>©MOUHCINE_TAOUFIQ; 2023</span>
-
+                <div class="footer-brand">Kella.AI</div>
+                <span>© 2024 Kella Inc. All rights reserved.</span>
+                <span class="developer-credit">Enhanced by Oussama Aslouj</span>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Settings</a>
+                </div>
             </div>
             <div id="icons">
-                <a href="http://www.twitter.fr"><i class="fa fa-twitter"></i></a>
-                <a href="http://www.facebook.fr"><i class="fa fa-facebook"></i></a>
-                <a href="http://www.linkedin.com"><i class="fa fa-linkedin"></i></a>
-
+                <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
             </div>
+        </div>
     </footer>
+
+    <!-- ============================================
+         CHATBOT WIDGET
+         ============================================ -->
     <div class="container">
         <div class="chatbox">
             <div class="chatbox__support">
+                <!-- Chat Header -->
                 <div class="chatbox__header">
                     <div class="chatbox__image--header">
-                        <img class="pdp" src="https://js.pngtree.com/web3/user_profile/head_img/011-star.png" alt="image">
+                        <img class="pdp" src="{{ url_for('static', filename='media/bot_avatar.png') }}"
+                            alt="Kella AI Assistant">
                     </div>
                     <div class="chatbox__content--header">
-                        <h4 class="chatbox__heading--header">Chat support</h4>
-                        <p class="chatbox__description--header">Hi, How can I help you?</p>
+                        <h4 class="chatbox__heading--header">Kella Assistant</h4>
+                        <p class="chatbox__description--header">Online • Ready to help</p>
                     </div>
                 </div>
+
+                <!-- Chat Messages -->
                 <div class="chatbox__messages">
                     <div></div>
                 </div>
+
+                <!-- Chat Input -->
                 <div class="chatbox__footer">
-                    <input type="text" placeholder="Write a message...">
-                    <button class="chatbox__send--footer send__button">Send</button>
+                    <input type="text" placeholder="Type your message..." autocomplete="off">
+                    <button class="chatbox__send--footer send__button" aria-label="Send message">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
                 </div>
             </div>
+
+            <!-- Chat Toggle Button -->
             <div class="chatbox__button">
-                <button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" /></button>
+                <button aria-label="Open chat">
+                    <img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" alt="">
+                </button>
             </div>
         </div>
     </div>
 
-
+    <!-- Scripts -->
     <script>
-        $SCRIPT_ROOT = {
-            {
-                request.script_root | tojson
-            }
-        };
+        $SCRIPT_ROOT = {{ request.script_root | tojson }};
     </script>
     <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
 </body>

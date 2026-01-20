@@ -13,7 +13,7 @@ from nltk_utils import bag_of_words, tokenize, stem
 from model import NeuralNet
 
 # Load the intents JSON file which contains the training data
-with open('ChatBot_based_on_NLP\intents.json', 'r') as f:
+with open('intents.json', 'r', encoding='utf-8') as f:
     intents = json.load(f)
 
 # Initialize lists to hold all words, tags, and sentence-tag pairs

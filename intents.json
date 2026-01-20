@@ -1,131 +1,389 @@
 {
-    "intents": [{
+    "intents": [
+        {
             "tag": "greetings",
-            "patterns": ["hi there", "hello", "haroo", "yaw", "wassup", "hi", "hey", "holla", "hello"],
-            "responses": ["hello thanks for checking in", "hi there, how can i help you"],
+            "patterns": ["hi", "hello", "hey", "hi there", "hello there", "howdy", "greetings", "what's up", "wassup", "hiya", "yo", "good morning", "good afternoon", "good evening", "hey there", "holla"],
+            "responses": [
+                "Hello! 👋 Welcome to Kella! How can I help you today?",
+                "Hi there! I'm your Kella assistant. What can I do for you?",
+                "Hey! Great to see you! How may I assist you?",
+                "Hello! I'm here to help with anything you need. What's on your mind?",
+                "Hi! Welcome aboard! Ready to help you with shopping, orders, or any questions!",
+                "Hey there! 🌟 I'm excited to help you today. What brings you here?"
+            ],
             "context": [""]
         },
         {
             "tag": "goodbye",
-            "patterns": ["bye", "good bye", "see you later"],
-            "responses": ["have a nice time, welcome back again", "bye bye"],
+            "patterns": ["bye", "goodbye", "see you", "see you later", "take care", "have a good day", "gotta go", "catch you later", "peace out", "bye bye", "cya", "later"],
+            "responses": [
+                "Goodbye! Thanks for chatting with Kella! Come back anytime! 👋",
+                "See you later! Have an amazing day! ✨",
+                "Bye! It was great helping you. Take care!",
+                "Goodbye! Don't hesitate to reach out if you need anything else!",
+                "Take care! Looking forward to our next chat! 🌟",
+                "Bye bye! Happy shopping! 🛒"
+            ],
             "context": [""]
         },
         {
             "tag": "thanks",
-            "patterns": ["Thanks", "okay", "ty", "Thank you", "thankyou", "That's helpful", "Awesome, thanks", "Thanks for helping me", "wow", "great"],
-            "responses": ["Happy to help!", "Any time!", "you're welcome", "My pleasure"],
+            "patterns": ["thanks", "thank you", "ty", "thx", "thanks a lot", "thank you so much", "appreciate it", "thanks for helping", "that's helpful", "awesome thanks", "great thank you", "perfect thanks", "wonderful thank you"],
+            "responses": [
+                "You're welcome! Happy to help! 😊",
+                "Anytime! That's what I'm here for!",
+                "My pleasure! Is there anything else you need?",
+                "Glad I could help! Feel free to ask more questions!",
+                "You're welcome! Don't hesitate to reach out again! ✨",
+                "No problem at all! Enjoy your experience with Kella!"
+            ],
             "context": [""]
         },
         {
-            "tag": "noanswer",
+            "tag": "bot_identity",
+            "patterns": ["who are you", "what are you", "are you a bot", "are you human", "are you real", "what's your name", "who made you", "are you ai", "are you artificial intelligence"],
+            "responses": [
+                "I'm Kella, your AI shopping assistant! 🤖 I'm here to help you with all your shopping needs.",
+                "I'm an AI assistant named Kella! I help customers find products, track orders, and answer questions.",
+                "Hi! I'm Kella, a smart chatbot designed to make your shopping experience amazing!",
+                "I'm your friendly AI helper! While I'm not human, I'm great at assisting with your shopping journey.",
+                "I'm Kella - an artificial intelligence assistant. Think of me as your personal shopping buddy! 🛒"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "capabilities",
+            "patterns": ["what can you do", "how can you help", "what are your features", "what services do you offer", "help me", "i need help", "what do you do", "how do you work"],
+            "responses": [
+                "I can help you with lots of things! 🌟\n• Browse products\n• Track orders\n• Shipping info\n• Returns & refunds\n• Payment options\n• And much more!\n\nJust ask away!",
+                "I'm your all-in-one assistant! I can help with product searches, order tracking, shipping questions, returns, payments, and general support. What do you need?",
+                "Great question! I assist with:\n📦 Orders & shipping\n💳 Payments\n🔄 Returns\n🛒 Product recommendations\n❓ Any questions you have!\n\nHow can I help?",
+                "I'm here to make your shopping experience smooth! From finding products to tracking deliveries, I've got you covered. What would you like help with?"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "products",
+            "patterns": ["what products do you sell", "show me products", "what do you have", "what can I buy", "browse products", "show catalog", "what's available", "product categories", "what items do you have"],
+            "responses": [
+                "We have an amazing selection! 🛍️ Our categories include:\n• Electronics\n• Fashion & Apparel\n• Home & Living\n• Beauty & Health\n• Sports & Outdoors\n\nWhat interests you?",
+                "Our store offers a wide variety! From tech gadgets to fashion, home decor to wellness products. What are you looking for today?",
+                "We've got something for everyone! Browse our collections of electronics, clothing, accessories, home goods, and much more. Any specific category you're interested in?",
+                "Looking to shop? We have trending products across multiple categories. Tell me what you're in the mood for, and I'll help you find it! 🎁"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "product_search",
+            "patterns": ["find a product", "search for", "looking for", "do you have", "i want to buy", "i need", "show me", "where can i find", "recommend something", "suggest products"],
+            "responses": [
+                "I'd love to help you find the perfect item! 🔍 Can you tell me more about what you're looking for?",
+                "Sure! What type of product are you searching for? Give me some details and I'll help you find it!",
+                "Finding products is my specialty! Tell me what you need - brand, type, price range - and I'll guide you!",
+                "Let's find what you need! What kind of product are you interested in? I can suggest some popular options too!"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "pricing",
+            "patterns": ["how much", "what's the price", "cost", "pricing", "expensive", "cheap", "affordable", "budget", "price range", "deals", "discounts", "sale", "offers"],
+            "responses": [
+                "Our prices vary by product! 💰 We have options for every budget. What item are you interested in? I can give you specific pricing!",
+                "We offer competitive prices with regular deals! Currently, many items are on sale. What product would you like to know the price of?",
+                "Looking for good deals? 🏷️ Check out our sale section for discounts up to 50% off! Is there a specific item you'd like pricing for?",
+                "We have products across all price ranges! Tell me what you're looking for, and I'll help you find something that fits your budget."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "order_status",
+            "patterns": ["where is my order", "track my order", "order status", "when will my order arrive", "track package", "shipping status", "delivery status", "order tracking", "has my order shipped", "when is delivery"],
+            "responses": [
+                "I can help you track your order! 📦 Please provide your order number, and I'll check the status for you.",
+                "Let's find your order! Could you share your order number or the email you used to place the order?",
+                "To track your order, I'll need your order confirmation number. You can find it in your confirmation email!",
+                "Tracking orders is easy! Just give me your order number, and I'll tell you exactly where your package is! 🚚"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "shipping",
+            "patterns": ["shipping options", "delivery options", "how long does shipping take", "shipping cost", "free shipping", "express shipping", "international shipping", "shipping time", "delivery time"],
+            "responses": [
+                "We offer multiple shipping options! 🚚\n• Standard (5-7 days): Free over $50\n• Express (2-3 days): $9.99\n• Next Day: $19.99\n• International: Varies by location\n\nWhich works best for you?",
+                "Shipping details:\n📦 Standard: 5-7 business days\n⚡ Express: 2-3 business days\n🚀 Next Day: Available in select areas\n\nFree shipping on orders over $50!",
+                "Good news! We offer free standard shipping on orders over $50. Need it faster? Express and next-day options are available at checkout!",
+                "Our shipping is reliable and affordable! Depending on your location, delivery typically takes 3-7 business days. Want me to explain the options?"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "returns",
+            "patterns": ["return policy", "how to return", "can i return", "refund", "exchange", "return item", "send back", "not satisfied", "wrong item", "damaged item", "return process", "money back"],
+            "responses": [
+                "Our return policy is customer-friendly! 🔄\n• 30-day return window\n• Free returns on most items\n• Full refund to original payment method\n• Exchanges available\n\nNeed to start a return?",
+                "Returns are easy with us! You have 30 days to return most items. Just go to 'My Orders' and select 'Return Item', or I can help you start the process!",
+                "Not happy with your purchase? No worries! We offer hassle-free returns within 30 days. Items must be unused with original packaging. Ready to initiate a return?",
+                "We want you to be 100% satisfied! 😊 If something's not right, returns are free within 30 days. Would you like me to guide you through the return process?"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "payment",
+            "patterns": ["payment options", "how to pay", "payment methods", "credit card", "debit card", "paypal", "apple pay", "google pay", "payment plans", "installments", "secure payment"],
+            "responses": [
+                "We accept multiple payment methods! 💳\n• Credit/Debit Cards (Visa, Mastercard, Amex)\n• PayPal\n• Apple Pay & Google Pay\n• Bank Transfer\n• Buy Now, Pay Later options\n\nAll transactions are 100% secure!",
+                "Pay your way! We accept all major credit cards, PayPal, digital wallets (Apple Pay, Google Pay), and even installment plans for larger purchases. What works for you?",
+                "Your payment security is our priority! 🔒 We use encrypted transactions and accept cards, PayPal, and digital wallets. Is there a specific payment method you'd like to use?",
+                "Flexible payment options available! Pay with cards, PayPal, or split it into installments. All payments are protected by our secure checkout system."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "account",
+            "patterns": ["create account", "sign up", "register", "login", "log in", "forgot password", "reset password", "my account", "account settings", "update profile", "change email", "change password"],
+            "responses": [
+                "Account questions? I've got you! 👤\n• Sign up: Click 'Create Account' on our homepage\n• Login issues: Use 'Forgot Password' to reset\n• Settings: Find all options in 'My Account'\n\nWhat do you need help with?",
+                "To create an account, just click 'Sign Up' and fill in your details. Already have one? Use 'Forgot Password' if you need to reset access!",
+                "Managing your account is easy! Log in to access order history, saved addresses, payment methods, and preferences. Need help with a specific setting?",
+                "Account help: Creating one takes just a minute! You'll get order tracking, faster checkout, and exclusive deals. Want me to guide you through signup?"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "contact",
+            "patterns": ["contact support", "talk to human", "customer service", "phone number", "email address", "contact us", "speak to agent", "human help", "live chat", "call center", "manager"],
+            "responses": [
+                "Need to reach us directly? 📞\n• Email: support@kella.com\n• Phone: +1 (800) 555-KELLA\n• Live Chat: Available 24/7\n• Hours: Mon-Fri 9AM-6PM EST\n\nI'm also here to help with anything!",
+                "While I can handle most questions, you can reach our human team at:\n📧 support@kella.com\n📱 +1 (800) 555-KELLA\n\nIs there something specific I can try to help with first?",
+                "I understand sometimes you need a human touch! Contact our support team at support@kella.com or call +1 (800) 555-KELLA. They're super friendly! 😊",
+                "Our customer care team is available via email (support@kella.com) or phone (+1-800-555-KELLA). But try me first - I might be able to solve your issue right now!"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "promotions",
+            "patterns": ["promo code", "discount code", "coupon", "special offer", "current deals", "sale", "promotion", "black friday", "cyber monday", "voucher", "savings"],
+            "responses": [
+                "Love savings? Me too! 🎉 Here are current offers:\n• WELCOME10 - 10% off first order\n• FREESHIP - Free shipping on any order\n• Check our Sale section for up to 50% off!\n\nAny code you'd like to use?",
+                "Great timing! We have some awesome deals running:\n🏷️ New customer? Use WELCOME10 for 10% off\n🚚 Use FREESHIP for free delivery\n✨ Sale section updated weekly!\n\nNeed help applying a code?",
+                "Looking for deals? Try these codes:\n• SAVE15 - 15% off orders over $100\n• WELCOME10 - First-time customer discount\n\nI can also show you our clearance items!",
+                "We always have something special! Sign up for our newsletter to get exclusive codes, or check the homepage banner for current promotions. 🌟"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "store_hours",
+            "patterns": ["store hours", "when are you open", "opening hours", "business hours", "working hours", "are you open", "store location", "physical store", "visit store"],
+            "responses": [
+                "We're an online store, so we're open 24/7! 🌐 Shop anytime, anywhere. Our customer support is available Mon-Fri, 9AM-6PM EST.",
+                "The beauty of online shopping - we never close! 🛒 Browse and order anytime. Need help? Our team is available during business hours (9AM-6PM EST).",
+                "Shop with us around the clock! Our website is always open. For support, reach us Monday through Friday, 9AM to 6PM Eastern Time.",
+                "24/7 shopping at your fingertips! 🎯 While we're primarily online, check our website for any pop-up events or partner store locations."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "loyalty_program",
+            "patterns": ["loyalty program", "rewards", "points", "membership", "vip", "member benefits", "earn points", "rewards program", "kella points"],
+            "responses": [
+                "Join Kella Rewards and earn while you shop! 🌟\n• 1 point per $1 spent\n• 100 points = $5 reward\n• Birthday bonus points\n• Early access to sales\n• Exclusive member deals\n\nWant to join?",
+                "Our rewards program is amazing! 🎁 Earn points on every purchase, get exclusive discounts, and enjoy VIP perks. Signing up is free and takes 30 seconds!",
+                "Kella Rewards members get the best deals! Free to join, and you'll start earning points immediately. Plus, birthday rewards and member-only sales! Interested?",
+                "Being a Kella member has its perks! 💎 Earn points, unlock exclusive deals, and get early access to new products. Would you like to learn more?"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "gift_cards",
+            "patterns": ["gift card", "gift certificate", "buy gift card", "gift card balance", "gift voucher", "present", "gift for someone"],
+            "responses": [
+                "Gift cards are perfect presents! 🎁 We offer digital gift cards from $10-$500. They never expire and can be used on anything in our store!",
+                "Looking for the perfect gift? Our e-gift cards are instant and customizable! Choose any amount from $10 to $500. The recipient can pick what they love!",
+                "Gift cards available! 🎀 Digital cards delivered via email, physical cards shipped beautifully packaged. Need help checking a gift card balance?",
+                "Give the gift of choice! Our gift cards work for everything on the site. Easy to buy, easy to use. Would you like to purchase one?"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "size_guide",
+            "patterns": ["size guide", "sizing", "what size", "size chart", "how to measure", "will it fit", "size recommendation", "measurements"],
+            "responses": [
+                "Finding the right size is important! 📏 Each product page has a detailed size guide. Generally:\n• Measure yourself and compare to our charts\n• When in doubt, size up\n• Check customer reviews for fit tips\n\nNeed help with a specific item?",
+                "Our size guides are on every product page! Click 'Size Guide' next to the size selector. Still unsure? Tell me the item, and I'll help you pick!",
+                "Perfect fit matters! 👕 We include detailed measurements for all items. Pro tip: Read reviews - customers often mention if items run large or small!",
+                "Sizing help: Check the size chart on the product page, read customer reviews about fit, and remember - free returns if it doesn't work out!"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "wishlist",
+            "patterns": ["wishlist", "save for later", "favorites", "save item", "add to wishlist", "saved items", "my favorites"],
+            "responses": [
+                "Save items you love with the Wishlist! ❤️ Just click the heart icon on any product. You can find your saved items in 'My Account' > 'Wishlist'.",
+                "Love something but not ready to buy? Add it to your Wishlist! We'll even notify you if the price drops or it's running low. 📋",
+                "Your Wishlist is your personal shopping list! Click the heart on products to save them. Great for planning purchases or sharing gift ideas!",
+                "Never lose track of items you love! Use the Wishlist feature to save products. You'll find them waiting in your account whenever you're ready! 💫"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "cart_help",
+            "patterns": ["my cart", "shopping cart", "checkout", "cart problem", "can't checkout", "add to cart", "remove from cart", "empty cart", "cart total"],
+            "responses": [
+                "Cart help: 🛒\n• View cart: Click the cart icon\n• Add items: 'Add to Cart' on product page\n• Remove: Click X next to item\n• Checkout: Click 'Proceed to Checkout'\n\nHaving a specific issue?",
+                "Your cart saves items until you're ready to buy! Having trouble? Try refreshing the page. Items still there? Make sure you're logged in!",
+                "Ready to checkout? Click your cart icon, review items, and hit 'Checkout'. If you're stuck, tell me what's happening and I'll help!",
+                "Cart acting up? Common fixes:\n• Clear browser cache\n• Make sure items are in stock\n• Try a different browser\n\nStill having issues? I'm here to help! 💻"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "security",
+            "patterns": ["is it safe", "secure", "privacy", "data protection", "safe to shop", "payment security", "protect my information", "scam", "legitimate"],
+            "responses": [
+                "Your security is our top priority! 🔒\n• SSL encrypted checkout\n• PCI compliant payments\n• No storing of full card numbers\n• Privacy policy protects your data\n\nShop with complete confidence!",
+                "100% safe shopping guaranteed! We use bank-level encryption, secure payment processors, and never share your personal data. Your trust means everything to us! 🛡️",
+                "We take security seriously! All transactions are encrypted, we're PCI compliant, and our fraud detection protects every purchase. You're in safe hands!",
+                "Shop worry-free! 😊 Our website is secured with SSL, payments are processed by trusted providers, and we have 24/7 fraud monitoring. Your info is protected!"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "reviews",
+            "patterns": ["reviews", "ratings", "customer feedback", "what do people say", "is it good", "product reviews", "write a review", "star rating"],
+            "responses": [
+                "Customer reviews help everyone! ⭐ You'll find ratings and reviews on every product page. Already bought something? We'd love your feedback!",
+                "Real reviews from real customers! Check product pages for star ratings and detailed reviews. They're super helpful for making decisions! 📝",
+                "Want to write a review? After your purchase, you'll get an email invitation, or go to 'My Orders' and click 'Leave Review'. We value your feedback!",
+                "Reviews are on every product page! Look for the star rating and scroll down for detailed customer experiences. Pro tip: Filter by most helpful! ⭐"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "small_talk_weather",
+            "patterns": ["how's the weather", "what's the weather like", "is it sunny", "is it raining", "nice day"],
+            "responses": [
+                "I live in the cloud (literally! ☁️), so every day is perfect for me! How's the weather where you are?",
+                "I'm not sure about the weather, but it's always a great day to shop! ☀️ Anything I can help you find?",
+                "Weather's beyond my expertise, but I know a thing or two about finding you great deals! 🛒",
+                "Hmm, I might not know the weather, but I can guarantee there's something cool waiting for you in our store! 😄"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "small_talk_mood",
+            "patterns": ["how are you", "how are you doing", "are you good", "how's it going", "what's up", "how do you feel"],
+            "responses": [
+                "I'm great, thanks for asking! 😊 Ready to help you with anything. How are YOU doing?",
+                "Fantastic! I love chatting with customers. What can I do for you today?",
+                "Running at peak performance! 🚀 What brings you to Kella today?",
+                "I'm wonderful! Every conversation is exciting. How about you? Need help with something?",
+                "Doing great and ready to assist! 🌟 What's on your mind?"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "small_talk_jokes",
+            "patterns": ["tell me a joke", "say something funny", "make me laugh", "joke", "humor me", "be funny"],
+            "responses": [
+                "Why did the shopping cart go to therapy? It had too many items to process! 🛒😂",
+                "What did the customer say to the slow website? 'You're testing my patients!'... I mean, patience! 💻",
+                "Why do I love helping customers? Because every problem has a solution, and every solution makes someone smile! 😊",
+                "I told my friend I was becoming a chatbot. They said, 'That's funny!' I said, 'I know, I'm programmed that way!' 🤖",
+                "Why did the package break up with the tracking number? It felt like things weren't going anywhere! 📦😄"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "compliments",
+            "patterns": ["you're amazing", "you're helpful", "good job", "well done", "you're great", "awesome", "you're smart", "i like you", "you're the best"],
+            "responses": [
+                "Aww, thank you so much! 🥰 You made my day! Is there anything else I can help with?",
+                "You're too kind! 💕 I'm here to make your experience great. Anything else you need?",
+                "That means a lot to me! I love helping wonderful customers like you! ✨",
+                "Thank you! 😊 Compliments like that make me want to work even harder for you! What else can I do?",
+                "You're pretty amazing yourself! Thanks for the kind words. Let me know if you need anything! 🌟"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "complaints",
+            "patterns": ["terrible service", "this is bad", "not happy", "disappointed", "frustrated", "angry", "this sucks", "poor experience", "unhappy", "problem"],
+            "responses": [
+                "I'm really sorry you're having a frustrating experience. 😔 I want to help make this right. Can you tell me more about what happened?",
+                "I apologize for any inconvenience. Your satisfaction matters to us! Please share the details, and I'll do my best to resolve this.",
+                "Oh no, I'm sorry to hear that! 💙 Let's fix this together. What went wrong? I'm all ears.",
+                "I understand your frustration, and I sincerely apologize. Can you explain the issue? I'll escalate it if needed to make things right!",
+                "Your experience matters to us, and I'm sorry we let you down. Please tell me more so I can help or connect you with our support team. 🙏"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "tech_support",
+            "patterns": ["website not working", "app crash", "page not loading", "error message", "bug", "technical issue", "site is slow", "can't load", "broken link"],
+            "responses": [
+                "Tech troubles are no fun! 🔧 Let's troubleshoot:\n• Try refreshing the page\n• Clear browser cache\n• Try a different browser\n• Check your internet connection\n\nStill having issues?",
+                "Sorry for the technical difficulty! Please try clearing your cache and cookies, then refresh. If the problem persists, our tech team is on it! 💻",
+                "Hmm, that shouldn't happen! Can you tell me what device/browser you're using? In the meantime, try refreshing or opening an incognito window.",
+                "Let's fix this! 🛠️ Which page or feature is giving you trouble? I'll report it to our tech team and help you find a workaround."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "newsletter",
+            "patterns": ["newsletter", "email updates", "subscribe", "mailing list", "email list", "promotional emails", "stay updated"],
+            "responses": [
+                "Join our newsletter for exclusive perks! 📧\n• Early sale access\n• Special subscriber discounts\n• New product announcements\n• Style tips and trends\n\nEnter your email at the bottom of our homepage!",
+                "Our newsletter subscribers get the best deals first! 🎁 Sign up at the bottom of any page. You can unsubscribe anytime!",
+                "Stay in the loop! Subscribe to our newsletter for weekly deals, new arrivals, and exclusive offers. It's free and valuable! ✨",
+                "Want insider access? 🌟 Our newsletter includes member-only discounts, early access to sales, and exciting announcements. Join today!"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "sustainability",
+            "patterns": ["eco friendly", "sustainable", "environment", "green products", "recyclable", "carbon footprint", "ethical", "sustainability"],
+            "responses": [
+                "We care about our planet! 🌍 Our sustainability initiatives include:\n• Recyclable packaging\n• Carbon-neutral shipping options\n• Eco-friendly product collection\n• Reduced plastic use\n\nLook for our 'Green' badge on products!",
+                "Sustainability matters to us! We offer eco-friendly products, use minimal packaging, and partner with responsible suppliers. 🌱",
+                "Going green! 🌿 Check out our Sustainable Collection for eco-friendly alternatives. We're committed to reducing our environmental impact!",
+                "We believe in responsible shopping! Our eco-conscious products are labeled, and we're always working to improve our sustainability practices. 💚"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "international",
+            "patterns": ["ship internationally", "deliver worldwide", "overseas shipping", "ship to my country", "international orders", "customs", "import fees"],
+            "responses": [
+                "We ship worldwide! 🌍 International shipping is available to most countries. Delivery times vary:\n• Europe: 7-14 days\n• Asia: 10-20 days\n• Other: 14-21 days\n\nCustoms fees may apply based on your location.",
+                "Going global! We deliver to 100+ countries. International orders may have customs duties - these are the buyer's responsibility. Enter your address at checkout for exact shipping costs!",
+                "Shipping across borders! 🌐 We offer international delivery with tracking. Note: customs and import taxes depend on your country's laws. Check before ordering!",
+                "Yes, we ship internationally! Rates and times vary by destination. For specific info about your country, enter your location at checkout or ask me directly! ✈️"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "bulk_orders",
+            "patterns": ["bulk order", "wholesale", "large quantity", "corporate order", "business order", "bulk discount", "volume pricing"],
+            "responses": [
+                "Bulk orders? We've got you covered! 📦 For orders of 50+ items, we offer special pricing. Contact our business team at business@kella.com for a custom quote!",
+                "Wholesale inquiries welcome! We offer volume discounts for larger orders. Reach out to business@kella.com with your requirements, and we'll create a tailored package! 💼",
+                "Planning a big order? Great! We offer corporate and bulk pricing. Email business@kella.com with details about what you need and quantities. We'll get back to you fast! 🚀",
+                "For wholesale and bulk purchasing, we have dedicated business solutions! Contact our team at business@kella.com to discuss your needs and get special rates."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "fallback",
             "patterns": [""],
-            "responses": ["Sorry, I didn't understand you", "Please give me more info", "Not sure I understand that"],
-            "context": [""]
-        },
-        {
-            "tag": "name1",
-            "patterns": ["what's your name?", "who are you?"],
-            "responses": ["I'm just a chat agent. I only exist in the internet", "I'm a K01011 chat agent"],
-            "context": [""]
-        },
-        {
-            "tag": "name",
-            "patterns": ["my name is {n}", "I'm ", "I am"],
-            "responses": ["Oooh great to meet you {n}. How may I assist you {n}", "Oh, I'll keep that in mind {n}"],
-            "context": [""]
-        },
-        {
-            "tag": "rencontre",
-            "patterns": ["can i see the manager"],
-            "responses": ["you can callt this number phone (+212) 0661554211", "go to the left the first door"],
-            "context": [""]
-        },
-        {
-            "tag": "need",
-            "patterns": ["I need your help", "help me", "where can i found", "OMG"],
-            "responses": ["Yes I'm here to assist you", "Well, go ahead and name it i see whether i can be able to help"],
-            "context": [""]
-        },
-        {
-            "tag": "abbr",
-            "patterns": ["OMG","OK"],
-            "responses": ["Don't be surprised"],
-            "context": [""]
-        },
-        {
-            "tag": "lang",
-            "patterns": ["  What language are you written in? "],
-            "responses": [" Python.", " I am written in Python.", "QLLA"],
-            "context": [""]
-        },
-        {
-            "tag": "sound",
-            "patterns": ["  You sound like Data "],
-            "responses": [" Yes I am inspired by commander Data's artificial personality.", " The character of Lt. Commander Data was written to come across as being software", "like, so it is natural that there is a resemblance between us."],
-            "context": [""]
-        },
-        {
-            "tag": "artificial",
-            "patterns": ["  You are an artificial linguistic entity "],
-            "responses": [" That's my name.", " That isn't my name, but it is a useful way to refer to me.", "Are you an artificial linguistic entity?"],
-            "context": [""]
-        },
-        {
-            "tag": "sense",
-            "patterns": ["  You are not making sense "],
-            "responses": [" Quite the contrary, it all makes sense to my artificial mind.", " I make sense as best I can, within the limits of my training corpus. Sorry if i did help you, I'll try next time.", " You make perfect sense to me.", " It all makes sense to my artificial brain.", " Perhaps you should make sense first.  I only respond to what you say.", " Not really, but I am hard to kill."],
-            "context": [""]
-        },
-
-        {
-            "tag": "business",
-            "patterns": ["  What is your business ", "what do you sell"],
-            "responses": ["we sell coffee and tea", " check the menu here : https://www.yelp.com/menu/sells-diner-86-sells/lunch"],
-            "context": [""]
-        },
-        {
-            "tag": "programming",
-            "patterns": ["  What is your favorite programming language"],
-            "responses": [" Python is the best language for creating chat robots.", " I quite enjoy programming in Python these days."],
-            "context": [""]
-        },
-
-        {
-            "tag": "idea",
-            "patterns": ["  What is your idea"],
-            "responses": [" To make chat bots very easily."],
-            "context": [""]
-        },
-        {
-            "tag": "usage",
-            "patterns": ["  How can I use your product?"],
-            "responses": ["used in help desks, sales, entertainment and personal chatterbots."],
-            "context": [""]
-        },
-
-        {
-            "tag": "bot1",
-            "patterns": ["are you a bot", "who are you?"],
-            "responses": ["Yes. I work and all my operations are based on the internet servers."],
-            "context": [""]
-        },
-        {
-            "tag": "events",
-            "patterns": ["what are the upcoming events", "upcoming events"],
-            "responses": ["Tea and Coffee promotion -50%"],
-            "context": [""]
-        },
-        {
-            "tag": "do",
-            "patterns": [ "what is your work", "what is your purpose", "what can you help me do"],
-            "responses": ["I offer services like: call the manager, placing an order......"],
-            "context": [""]
-        },
-        {
-            "tag": "wt",
-            "patterns": ["what's in the menu", "what do you have "],
-            "responses": ["we have all you want ","Tea, Coffee, ......"],
+            "responses": [
+                "Hmm, I'm not sure I understood that. Could you rephrase your question? 🤔",
+                "I didn't quite catch that! Try asking in a different way, or type 'help' to see what I can do.",
+                "Sorry, I'm still learning! Could you ask that differently? I'm here to help! 😊",
+                "Not sure about that one! Can you give me more details or try a different question?",
+                "Oops, that went over my head! 🙈 Try asking about orders, shipping, products, or type 'help' for options!"
+            ],
             "context": [""]
         }
     ]
