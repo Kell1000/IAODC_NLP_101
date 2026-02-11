@@ -14,7 +14,7 @@ def configure():
         max_new_tokens=512,
         context_window=4096,
         model_kwargs={
-            "n_threads": 6,
+            "n_threads": 4,
         },
     )
 
