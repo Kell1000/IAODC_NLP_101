@@ -1,20 +1,14 @@
-# Examen : Manipulation des Transformers et Exploration des LLM
-## Niveau : Débutant
+# Manipulation des Transformers et Exploration des LLM
 
-**Durée suggérée :** 3 heures  
-**Note totale :** 100 points
+## Partie 1 : Questions Théoriques
 
----
-
-## Partie 1 : Questions Théoriques (30 points)
-
-### Question 1 (5 points)
+### Question 1
 Expliquez en vos propres mots ce qu'est un modèle Transformer et quelle innovation majeure il apporte par rapport aux architectures précédentes (RNN, LSTM).
 
-### Question 2 (5 points)
+### Question 2
 Qu'est-ce que le mécanisme d'attention (attention mechanism) ? Pourquoi est-il crucial dans l'architecture Transformer ?
 
-### Question 3 (5 points)
+### Question 3
 Définissez les termes suivants :
 - **Token**
 - **Embedding**
@@ -22,7 +16,7 @@ Définissez les termes suivants :
 - **Temperature**
 - **Top-k sampling**
 
-### Question 4 (5 points)
+### Question 4
 Quelle est la différence entre :
 - Un modèle encoder-only (comme BERT)
 - Un modèle decoder-only (comme GPT)
@@ -30,14 +24,14 @@ Quelle est la différence entre :
 
 Donnez un exemple d'usage pour chacun.
 
-### Question 5 (10 points)
+### Question 5
 Expliquez le processus de pré-entraînement et de fine-tuning d'un LLM. Pourquoi ces deux étapes sont-elles importantes ?
 
 ---
 
-## Partie 2 : Manipulation Pratique avec Hugging Face (40 points)
+## Partie 2 : Manipulation Pratique avec Hugging Face
 
-### Exercice 1 : Chargement et utilisation d'un modèle (15 points)
+### Exercice 1 : Chargement et utilisation d'un modèle
 
 Écrivez un script Python qui :
 1. Charge le modèle `distilbert-base-uncased-finetuned-sst-2-english`
@@ -49,7 +43,7 @@ Expliquez le processus de pré-entraînement et de fine-tuning d'un LLM. Pourquo
 
 **Bibliothèques autorisées :** transformers, torch
 
-### Exercice 2 : Génération de texte (15 points)
+### Exercice 2 : Génération de texte
 
 Créez un script qui :
 1. Charge le modèle `gpt2`
@@ -60,7 +54,7 @@ Créez un script qui :
    - `top_k` : 50
 4. Compare et commente les résultats obtenus avec différentes températures
 
-### Exercice 3 : Tokenization (10 points)
+### Exercice 3 : Tokenization
 
 Écrivez un code qui :
 1. Charge le tokenizer de `bert-base-uncased`
@@ -73,9 +67,9 @@ Créez un script qui :
 
 ---
 
-## Partie 3 : Exploration et Analyse (20 points)
+## Partie 3 : Exploration et Analyse
 
-### Exercice 4 : Comparaison de modèles (10 points)
+### Exercice 4 : Comparaison de modèles
 
 Comparez les performances de deux modèles différents sur la même tâche de question-réponse :
 - `distilbert-base-cased-distilled-squad`
@@ -93,7 +87,7 @@ Analysez :
 - Le temps d'inférence
 - Les scores de confiance
 
-### Exercice 5 : Prompt Engineering (10 points)
+### Exercice 5 : Prompt Engineering
 
 Pour la tâche de génération de texte, testez différents prompts pour obtenir :
 1. Un poème sur l'intelligence artificielle
@@ -107,7 +101,7 @@ Documentez :
 
 ---
 
-## Partie 4 : Mini-Projet (10 points)
+## Partie 4 : Mini-Projet
 
 ### Projet : Classificateur de sentiment personnalisé
 
@@ -117,26 +111,7 @@ Créez une petite application qui :
 3. Affiche le résultat de manière conviviale
 4. Permet de traiter plusieurs textes successivement
 
-**Bonus (+5 points) :** Ajoutez une interface simple avec Gradio ou Streamlit
-
----
-
-## Critères d'évaluation
-
-### Code (50%)
-- Fonctionnalité : Le code s'exécute sans erreur
-- Qualité : Code propre, commenté, bien structuré
-- Utilisation correcte des bibliothèques
-
-### Compréhension théorique (30%)
-- Précision des réponses
-- Clarté des explications
-- Utilisation appropriée du vocabulaire technique
-
-### Analyse et réflexion (20%)
-- Profondeur de l'analyse
-- Pertinence des observations
-- Esprit critique
+**Bonus:** Ajoutez une interface simple avec Gradio ou Streamlit
 
 ---
 
@@ -147,28 +122,3 @@ Créez une petite application qui :
 - Vos notes de cours
 
 **⚠️ Important :** Le plagiat de code trouvé en ligne sans compréhension est sanctionné. Vous devez être capable d'expliquer chaque ligne de votre code.
-
----
-
-## Barème détaillé
-
-| Partie | Points | Description |
-|--------|--------|-------------|
-| Partie 1 | 30 | Questions théoriques |
-| Partie 2 | 40 | Manipulation pratique |
-| Partie 3 | 20 | Exploration et analyse |
-| Partie 4 | 10 | Mini-projet |
-| **Total** | **100** | |
-| Bonus | +5 | Interface utilisateur |
-
----
-
-## Conseils pour réussir
-
-1. **Lisez attentivement** chaque question avant de commencer
-2. **Testez votre code** régulièrement
-3. **Commentez** votre code pour montrer votre compréhension
-4. **Gérez votre temps** : ne restez pas bloqué trop longtemps sur une question
-5. **Vérifiez** vos réponses avant de soumettre
-
-**Bonne chance ! 🚀**
