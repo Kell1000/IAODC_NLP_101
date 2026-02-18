@@ -1,0 +1,2571 @@
+[
+    {
+        "id": 1,
+        "ingredient": "Water",
+        "category": "Base",
+        "effect_summary": "Hydration",
+        "health_effect": "Essential for life. Maintains hydration, regulates body temperature, and helps flush out waste. Safe and necessary."
+    },
+    {
+        "id": 2,
+        "ingredient": "Soy Base (Water, Soybeans)",
+        "category": "Protein Source",
+        "effect_summary": "Protein / Allergen",
+        "health_effect": "Good source of plant protein and isoflavones. May lower cholesterol. However, it is a common allergen (Soy) and excessive consumption is debated regarding hormonal balance in some individuals."
+    },
+    {
+        "id": 3,
+        "ingredient": "Tomato Paste",
+        "category": "Vegetable Concentrate",
+        "effect_summary": "Antioxidant",
+        "health_effect": "Rich in Lycopene, a powerful antioxidant that supports heart health and may reduce the risk of certain cancers. Generally very healthy."
+    },
+    {
+        "id": 4,
+        "ingredient": "Cane Sugar",
+        "category": "Sweetener",
+        "effect_summary": "Energy / Blood Sugar Spike",
+        "health_effect": "Provides quick energy (calories) but lacks nutrients. Excessive intake leads to blood sugar spikes, weight gain, inflammation, and increased risk of Type 2 diabetes."
+    },
+    {
+        "id": 5,
+        "ingredient": "Sea Salt",
+        "category": "Mineral / Preservative",
+        "effect_summary": "Electrolytes / Hypertension",
+        "health_effect": "Contains sodium essential for nerve and muscle function. However, high intake (over 2300mg/day) is strongly linked to high blood pressure (hypertension) and heart disease."
+    },
+    {
+        "id": 6,
+        "ingredient": "Onion Puree",
+        "category": "Vegetable",
+        "effect_summary": "Anti-inflammatory",
+        "health_effect": "Contains antioxidants like quercetin. Supports immune health and reduces inflammation. May cause digestive discomfort (gas/bloating) in people with IBS."
+    },
+    {
+        "id": 7,
+        "ingredient": "High-Oleic Sunflower Oil",
+        "category": "Fat / Oil",
+        "effect_summary": "Heart Health",
+        "health_effect": "Rich in monounsaturated fats (Omega-9), similar to olive oil. More stable for cooking than regular sunflower oil. Generally considered heart-healthy compared to other vegetable oils high in Omega-6."
+    },
+    {
+        "id": 8,
+        "ingredient": "Sodium Citrate",
+        "category": "Additive / Acidity Regulator",
+        "effect_summary": "pH Buffer",
+        "health_effect": "Used to control acidity and prevent milk curdling. Generally recognized as safe (GRAS). In medical doses, it treats kidney stones, but in food, it just adds sodium content."
+    },
+    {
+        "id": 9,
+        "ingredient": "Garlic Puree",
+        "category": "Vegetable",
+        "effect_summary": "Immunity Booster",
+        "health_effect": "Known for boosting the immune system and lowering blood pressure. Contains allicin which has antibacterial properties."
+    },
+    {
+        "id": 10,
+        "ingredient": "Rice Flour",
+        "category": "Thickener",
+        "effect_summary": "Gluten-Free Carb",
+        "health_effect": "A gluten-free thickening agent. Safe for celiacs. High glycemic index, so it can raise blood sugar relatively quickly."
+    },
+    {
+        "id": 11,
+        "ingredient": "Basil Oil",
+        "category": "Flavoring",
+        "effect_summary": "Anti-inflammatory",
+        "health_effect": "Concentrated extract of basil. Contains eugenol which combats inflammation. Generally safe and healthy in food amounts."
+    },
+    {
+        "id": 12,
+        "ingredient": "Monosodium Glutamate (MSG)",
+        "category": "Flavor Enhancer",
+        "effect_summary": "Savory Taste / Sensitivity",
+        "health_effect": "Enhances Umami flavor. Generally safe for most people, but some individuals report headaches, sweating, or chest pressure (MSG symptom complex) after consuming large amounts."
+    },
+    {
+        "id": 13,
+        "ingredient": "Sodium Benzoate",
+        "category": "Preservative",
+        "effect_summary": "Shelf Life / Potential Hyperactivity",
+        "health_effect": "Prevents bacterial growth. While safe in small amounts, studies suggest it may increase hyperactivity in children when combined with artificial food colors. Can form benzene (carcinogen) if mixed with Vitamin C in drinks."
+    },
+    {
+        "id": 14,
+        "ingredient": "High Fructose Corn Syrup (HFCS)",
+        "category": "Sweetener",
+        "effect_summary": "Metabolic Strain",
+        "health_effect": "Cheap sweetener found in processed foods. Linked to higher risks of obesity, fatty liver disease, and insulin resistance compared to regular sugar due to how the liver metabolizes fructose."
+    },
+    {
+        "id": 15,
+        "ingredient": "Red 40 (Allura Red)",
+        "category": "Artificial Color",
+        "effect_summary": "Colorant / Hyperactivity",
+        "health_effect": "Synthetic dye. Some studies link it to increased hyperactivity and attention issues in children (ADHD). Banned in some European countries but legal in the US/Morocco."
+    },
+    {
+        "id": 16,
+        "ingredient": "Carrageenan",
+        "category": "Thickener / Stabilizer",
+        "effect_summary": "Texture / Gut Irritation",
+        "health_effect": "Derived from seaweed. Used to thicken dairy/alternatives. 'Degraded' carrageenan causes inflammation, and even food-grade carrageenan can trigger digestive issues or inflammation in sensitive individuals."
+    },
+    {
+        "id": 17,
+        "ingredient": "Aspartame",
+        "category": "Artificial Sweetener",
+        "effect_summary": "Zero Calorie / Controversy",
+        "health_effect": "Low-calorie sweetener. Safe for most, but dangerous for people with Phenylketonuria (PKU). Controversial studies regarding its effects on gut bacteria and headaches, but FDA approved."
+    },
+    {
+        "id": 18,
+        "ingredient": "Trans Fat (Partially Hydrogenated Oil)",
+        "category": "Fat",
+        "effect_summary": "Cardiovascular Risk",
+        "health_effect": "The most harmful type of fat. Increases 'bad' cholesterol (LDL) and lowers 'good' cholesterol (HDL). Strongly linked to heart disease and stroke. Many countries have banned it."
+    },
+    {
+        "id": 19,
+        "ingredient": "Citric Acid",
+        "category": "Preservative / Acidifier",
+        "effect_summary": "Tartness / Digestion",
+        "health_effect": "Naturally found in citrus fruits but manufactured from mold (Aspergillus niger) for industry. Generally safe, helps preservation, and can prevent kidney stones. Rare cases of mold allergy reaction."
+    },
+    {
+        "id": 20,
+        "ingredient": "Guar Gum",
+        "category": "Thickener",
+        "effect_summary": "Fiber / Digestion",
+        "health_effect": "Fiber from the guar bean. Improves texture. High doses can cause gas and bloating, but in small amounts, it may help lower cholesterol and glucose absorption."
+    },
+    {
+        "id": 21,
+        "ingredient": "Potassium Sorbate",
+        "category": "Preservative",
+        "effect_summary": "Shelf Life",
+        "health_effect": "Commonly used to prevent mold and yeast in cheese, wine, and yogurt. Generally recognized as safe (GRAS), but can cause skin irritation in some people."
+    },
+    {
+        "id": 22,
+        "ingredient": "Calcium Propionate",
+        "category": "Preservative",
+        "effect_summary": "Anti-mold",
+        "health_effect": "Prevents mold and bacterial growth in bread and baked goods. Help extend shelf life. Generally safe, but some linked it to behavioral changes in children, though evidence is weak."
+    },
+    {
+        "id": 23,
+        "ingredient": "Sodium Nitrite",
+        "category": "Preservative / Color Fixative",
+        "effect_summary": "Curing Agent / Carcinogen Risk",
+        "health_effect": "Used in cured meats to prevent botulism and provide pink color. Linked to the formation of nitrosamines (carcinogens) when cooked at high heat."
+    },
+    {
+        "id": 24,
+        "ingredient": "BHA (Butylated Hydroxyanisole)",
+        "category": "Preservative / Antioxidant",
+        "effect_summary": "Antioxidant / Potential Endocrine Disruptor",
+        "health_effect": "Used to prevent fats from going rancid. Classified as 'reasonably anticipated to be a human carcinogen' by the NTP. May disrupt hormone function."
+    },
+    {
+        "id": 25,
+        "ingredient": "BHT (Butylated Hydroxytoluene)",
+        "category": "Preservative / Antioxidant",
+        "effect_summary": "Antioxidant / Synthetic",
+        "health_effect": "Similar to BHA, used to preserve freshness in fats and oils. Some animal studies show potential for liver and kidney damage at very high doses."
+    },
+    {
+        "id": 26,
+        "ingredient": "TBHQ (Tertiary Butylhydroquinone)",
+        "category": "Preservative / Antioxidant",
+        "effect_summary": "Fats Stability / Controversy",
+        "health_effect": "Synthetic antioxidant used to extend the shelf life of oily foods. High doses in animals have been linked to DNA damage and precancerous tumors."
+    },
+    {
+        "id": 27,
+        "ingredient": "Sulfur Dioxide",
+        "category": "Preservative / Antioxidant",
+        "effect_summary": "Dried Fruit Freshener / Allergen",
+        "health_effect": "Used to prevent browning in dried fruits and wine. Can trigger severe allergic reactions or asthma attacks in sensitive individuals."
+    },
+    {
+        "id": 28,
+        "ingredient": "Propyl Gallate",
+        "category": "Preservative",
+        "effect_summary": "Fat Preservative",
+        "health_effect": "Used to protect fats and oils from oxidation. Often used in chewing gum and meat products. Some concern over its effect on hormones."
+    },
+    {
+        "id": 29,
+        "ingredient": "Potassium Benzoate",
+        "category": "Preservative",
+        "effect_summary": "Shelf Life",
+        "health_effect": "Similar to sodium benzoate, used in acidic foods and drinks. Can also form benzene when combined with Vitamin C."
+    },
+    {
+        "id": 30,
+        "ingredient": "Sodium Erythorbate",
+        "category": "Preservative",
+        "effect_summary": "Color Stabilizer",
+        "health_effect": "An antioxidant related to Vitamin C. Used to accelerate curing and maintain color in meats. Generally safe."
+    },
+    {
+        "id": 31,
+        "ingredient": "Stevia Extract",
+        "category": "Natural Sweetener",
+        "effect_summary": "Zero Calorie",
+        "health_effect": "Derived from the Stevia rebaudiana plant. 200-300 times sweeter than sugar. Does not affect blood sugar. Generally safe, but some find the aftertaste bitter."
+    },
+    {
+        "id": 32,
+        "ingredient": "Monk Fruit Extract",
+        "category": "Natural Sweetener",
+        "effect_summary": "Zero Calorie / Antioxidant",
+        "health_effect": "Extracted from Luo Han Guo fruit. Contains mogrosides, which are mogroside antioxidants. Zero glycemic index. Highly stable for cooking."
+    },
+    {
+        "id": 33,
+        "ingredient": "Erythritol",
+        "category": "Sugar Alcohol",
+        "effect_summary": "Low Calorie / Tooth-Friendly",
+        "health_effect": "A sugar alcohol that is 70% as sweet as sugar. Most of it is absorbed into the blood and excreted, reducing the risk of digestive issues compared to other sugar alcohols."
+    },
+    {
+        "id": 34,
+        "ingredient": "Xylitol",
+        "category": "Sugar Alcohol",
+        "effect_summary": "Dental Health / Low Glycemic",
+        "health_effect": "Sugar alcohol commonly used in gum. Prevents tooth decay. Highly toxic to dogs. Can cause digestive upset in large amounts."
+    },
+    {
+        "id": 35,
+        "ingredient": "Sorbitol",
+        "category": "Sugar Alcohol",
+        "effect_summary": "Texture / Laxative Effect",
+        "health_effect": "Used in sugar-free candies and gums. Lower calories than sugar. Can have a significant laxative effect if consumed in excess."
+    },
+    {
+        "id": 36,
+        "ingredient": "Maltitol",
+        "category": "Sugar Alcohol",
+        "effect_summary": "Sugar-like Taste",
+        "health_effect": "Very similar in taste and function to sugar but with fewer calories. Has a higher glycemic index than other sugar alcohols and can cause significant bloating/gas."
+    },
+    {
+        "id": 37,
+        "ingredient": "Acesulfame Potassium (Ace-K)",
+        "category": "Artificial Sweetener",
+        "effect_summary": "Calorie-Free / Heat Stable",
+        "health_effect": "Often blended with other sweeteners. 200 times sweeter than sugar. Some concerns about its long-term safety, though approved by major health bodies."
+    },
+    {
+        "id": 38,
+        "ingredient": "Sucralose",
+        "category": "Artificial Sweetener",
+        "effect_summary": "Zero Calorie / Splenda",
+        "health_effect": "Derived from sucrose but with chlorine atoms. 600 times sweeter than sugar. Generally considered safe, but some studies suggest it may affect gut microbiome."
+    },
+    {
+        "id": 39,
+        "ingredient": "Saccharin",
+        "category": "Artificial Sweetener",
+        "effect_summary": "Zero Calorie",
+        "health_effect": "The oldest artificial sweetener. Once linked to bladder cancer in rats, but later cleared for human consumption. Many people dislike its metallic aftertaste."
+    },
+    {
+        "id": 40,
+        "ingredient": "Agave Nectar",
+        "category": "Natural Sweetener",
+        "effect_summary": "Low Glycemic / High Fructose",
+        "health_effect": "Popular 'natural' sweetener. Has a lower glycemic index than sugar but is very high in fructose, which can strain the liver in high amounts."
+    },
+    {
+        "id": 41,
+        "ingredient": "Honey",
+        "category": "Natural Sweetener",
+        "effect_summary": "Antioxidant / Antimicrobial",
+        "health_effect": "Contains small amounts of vitamins, minerals, and antioxidants. Better than refined sugar but still high in calories and sugar. Should not be given to infants under 1 year."
+    },
+    {
+        "id": 42,
+        "ingredient": "Maple Syrup",
+        "category": "Natural Sweetener",
+        "effect_summary": "Mineral Source",
+        "health_effect": "Contains manganese, zinc, and antioxidants. Still a concentrated source of sugar, but offers more nutritional value than white sugar."
+    },
+    {
+        "id": 43,
+        "ingredient": "Brown Rice Syrup",
+        "category": "Natural Sweetener",
+        "effect_summary": "Complex Carb Sweetener",
+        "health_effect": "Made by breaking down rice starch. Primarily maltose. High glycemic index, can cause rapid blood sugar spikes. Some concern over arsenic levels in rice products."
+    },
+    {
+        "id": 44,
+        "ingredient": "Coconut Sugar",
+        "category": "Natural Sweetener",
+        "effect_summary": "Low Glycemic / Mineral-Rich",
+        "health_effect": "Produced from coconut palm sap. Contains small amounts of inulin (fiber) and minerals. Has a lower glycemic index than table sugar."
+    },
+    {
+        "id": 45,
+        "ingredient": "Xanthan Gum",
+        "category": "Thickener / Stabilizer",
+        "effect_summary": "Texture / Fiber",
+        "health_effect": "Produced by bacterial fermentation. Used to thicken and stabilize sauces and gluten-free bakes. A type of soluble fiber; can cause gas in large amounts."
+    },
+    {
+        "id": 46,
+        "ingredient": "Agar Agar",
+        "category": "Thickener / Vegan Gelatin",
+        "effect_summary": "Plant-based Thickener",
+        "health_effect": "Derived from red algae. A vegan alternative to gelatin. High in fiber and zero calories. Generally safe."
+    },
+    {
+        "id": 47,
+        "ingredient": "Pectin",
+        "category": "Thickener / Fiber",
+        "effect_summary": "Gelling Agent",
+        "health_effect": "A fiber found in fruits like apples and citrus. Used to thicken jams and jellies. Good for digestive health and cholesterol."
+    },
+    {
+        "id": 48,
+        "ingredient": "Modified Corn Starch",
+        "category": "Thickener",
+        "effect_summary": "Texture / Processing Aid",
+        "health_effect": "Corn starch that has been physically, enzymatically, or chemically altered for stability in high heat or acid. Generally safe but highly processed."
+    },
+    {
+        "id": 49,
+        "ingredient": "Tapioca Starch",
+        "category": "Thickener",
+        "effect_summary": "Gluten-Free Flour",
+        "health_effect": "Extracted from cassava root. Provides a chewy texture and is a common thickener in gluten-free products. High in carbs, low in nutrients."
+    },
+    {
+        "id": 50,
+        "ingredient": "Gelatin",
+        "category": "Thickener / Protein",
+        "effect_summary": "Collagen Source",
+        "health_effect": "Derived from animal protein (collagen). Used in gummies, jellies, and marshmallows. Good for joint and skin health if high quality."
+    },
+    {
+        "id": 51,
+        "ingredient": "Soy Lecithin",
+        "category": "Emulsifier",
+        "effect_summary": "Mixing Agent",
+        "health_effect": "Derived from soybeans. Helps fats and water stay mixed. Contains choline, an essential nutrient. Generally safe, though a concern for those with severe soy allergies."
+    },
+    {
+        "id": 52,
+        "ingredient": "Sunflower Lecithin",
+        "category": "Emulsifier",
+        "effect_summary": "Mixing Agent / Non-GMO",
+        "health_effect": "A popular alternative to soy lecithin. Extracted without chemicals. Generally preferred by those avoiding soy or GMOs."
+    },
+    {
+        "id": 53,
+        "ingredient": "Mono- and Diglycerides",
+        "category": "Emulsifier",
+        "effect_summary": "Smoothness / Shelf Life",
+        "health_effect": "Fats used to blend ingredients and soften bread. May contain small amounts of trans fats, though usually not labeled as such due to low concentration."
+    },
+    {
+        "id": 54,
+        "ingredient": "Polysorbate 60",
+        "category": "Emulsifier",
+        "effect_summary": "Stability",
+        "health_effect": "A synthetic emulsifier used in baked goods and dairy products. Some animal studies suggest potential for gut inflammation at very high doses."
+    },
+    {
+        "id": 55,
+        "ingredient": "Gum Arabic (Acacia Gum)",
+        "category": "Thickener / Stabilizer",
+        "effect_summary": "Prebiotic Fiber",
+        "health_effect": "Natural gum from acacia trees. Used in candies and sodas. Functions as a prebiotic, supporting healthy gut bacteria."
+    },
+    {
+        "id": 56,
+        "ingredient": "Locust Bean Gum",
+        "category": "Thickener / Stabilizer",
+        "effect_summary": "Plant Fiber",
+        "health_effect": "Derived from carob tree seeds. Used in ice cream and cream cheese to prevent ice crystals. Generally safe and may lower cholesterol."
+    },
+    {
+        "id": 57,
+        "ingredient": "Sodium Alginate",
+        "category": "Thickener / Gelling Agent",
+        "effect_summary": "From Seaweed",
+        "health_effect": "Extracted from brown seaweed. Used in molecular gastronomy and as a thickener. Generally safe."
+    },
+    {
+        "id": 58,
+        "ingredient": "Extra Virgin Olive Oil",
+        "category": "Fat / Oil",
+        "effect_summary": "Heart Health",
+        "health_effect": "Rich in monounsaturated fats and polyphenols. Reduces inflammation and supports heart health. Best used raw or at low to medium heat."
+    },
+    {
+        "id": 59,
+        "ingredient": "Coconut Oil",
+        "category": "Fat / Oil",
+        "effect_summary": "MCTs / Saturated Fat",
+        "health_effect": "High in saturated fat, specifically Medium Chain Triglycerides (MCTs). debated health effects; may raise both LDL and HDL cholesterol."
+    },
+    {
+        "id": 60,
+        "ingredient": "Avocado Oil",
+        "category": "Fat / Oil",
+        "effect_summary": "High Smoke Point",
+        "health_effect": "Rich in monounsaturated fats (Oleic acid). Extremely stable at high heat. Excellent for heart health and skin."
+    },
+    {
+        "id": 61,
+        "ingredient": "Canola Oil",
+        "category": "Fat / Oil",
+        "effect_summary": "Omega-3 Source",
+        "health_effect": "Low in saturated fat and contains heart-healthy Omega-3s. Often refined with high heat and chemicals, leading to some health debate."
+    },
+    {
+        "id": 62,
+        "ingredient": "Soybean Oil",
+        "category": "Fat / Oil",
+        "effect_summary": "Omega-6 Heavy",
+        "health_effect": "One of the most widely used vegetable oils. High in Omega-6 fatty acids, which can contribute to inflammation if not balanced with Omega-3s."
+    },
+    {
+        "id": 63,
+        "ingredient": "Palm Oil",
+        "category": "Fat / Oil",
+        "effect_summary": "Saturated Fat / Texture",
+        "health_effect": "Provides a semi-solid texture to processed foods. High in saturated fat. Major environmental concerns regarding deforestation."
+    },
+    {
+        "id": 64,
+        "ingredient": "Safflower Oil",
+        "category": "Fat / Oil",
+        "effect_summary": "Healthy Fats",
+        "health_effect": "High in monounsaturated or polyunsaturated fats depending on the type. Light flavor and good for high-heat cooking."
+    },
+    {
+        "id": 65,
+        "ingredient": "Flaxseed Oil",
+        "category": "Fat / Oil",
+        "effect_summary": "Omega-3 Powerhouse",
+        "health_effect": "Very high in Alpha-Linolenic Acid (ALA). Highly unstable; must be kept cold. Great for reducing inflammation but not for cooking."
+    },
+    {
+        "id": 66,
+        "ingredient": "Grapeseed Oil",
+        "category": "Fat / Oil",
+        "effect_summary": "Antioxidant Rich",
+        "health_effect": "By-product of winemaking. High in Vitamin E and Omega-6. Neutral flavor. Good for saut\u00e9ing but should be used in moderation due to Omega-6 content."
+    },
+    {
+        "id": 67,
+        "ingredient": "Sesame Oil",
+        "category": "Fat / Oil",
+        "effect_summary": "Nutty Flavor / Antioxidants",
+        "health_effect": "Rich in sesamol and sesaminol, potent antioxidants. Common in Asian cuisine. Heart-healthy and supports blood sugar control."
+    },
+    {
+        "id": 68,
+        "ingredient": "Enriched Wheat Flour",
+        "category": "Grain / Flour",
+        "effect_summary": "B-Vitamins / Low Fiber",
+        "health_effect": "Wheat flour with added nutrients like Iron and B-vitamins (Niacin, Thiamine, etc.). Missing the fiber and natural nutrients of whole grains."
+    },
+    {
+        "id": 69,
+        "ingredient": "Whole Wheat Flour",
+        "category": "Grain / Flour",
+        "effect_summary": "Fiber / Complex Carb",
+        "health_effect": "Contains the bran, germ, and endosperm of the wheat kernel. High in fiber and nutrients compared to white flour."
+    },
+    {
+        "id": 70,
+        "ingredient": "Oat Flour",
+        "category": "Grain / Flour",
+        "effect_summary": "Soluble Fiber / Heart Health",
+        "health_effect": "Made from ground oats. High in beta-glucan, which helps lower cholesterol. Generally safe, but verify gluten-free if needed."
+    },
+    {
+        "id": 71,
+        "ingredient": "Corn Flour",
+        "category": "Grain / Flour",
+        "effect_summary": "Gluten-Free Grain",
+        "health_effect": "Made from ground dried corn. A staple in many cuisines. Good source of antioxidants like lutein and zeaxanthin."
+    },
+    {
+        "id": 72,
+        "ingredient": "Quinoa",
+        "category": "Grain / Protein",
+        "effect_summary": "Complete Protein",
+        "health_effect": "Technically a seed, used as a grain. One of the few plant foods that contains all nine essential amino acids. Very healthy and gluten-free."
+    },
+    {
+        "id": 73,
+        "ingredient": "Spelt Flour",
+        "category": "Grain / Flour",
+        "effect_summary": "Ancient Grain",
+        "health_effect": "An ancient species of wheat. Contains more protein and minerals than modern wheat. Not gluten-free but sometimes easier to digest for some."
+    },
+    {
+        "id": 74,
+        "ingredient": "Barley",
+        "category": "Grain",
+        "effect_summary": "High Fiber / Beta-Glucans",
+        "health_effect": "A chewy grain high in fiber. Excellent for blood sugar control and heart health. Contains gluten."
+    },
+    {
+        "id": 75,
+        "ingredient": "Chickpea Flour (Besan)",
+        "category": "Legume / Flour",
+        "effect_summary": "Protein / Fiber",
+        "health_effect": "Made from ground chickpeas. High in protein and fiber. Gluten-free and very versatile in cooking."
+    },
+    {
+        "id": 76,
+        "ingredient": "Lentils",
+        "category": "Legume",
+        "effect_summary": "Plant Protein / Iron",
+        "health_effect": "Extremely nutritious legume. Rich in protein, folate, and iron. Supports heart health and weight management."
+    },
+    {
+        "id": 77,
+        "ingredient": "Black Beans",
+        "category": "Legume",
+        "effect_summary": "Antioxidants / Fiber",
+        "health_effect": "Rich in anthocyanins (the same antioxidants in berries). Excellent for digestion and blood pressure regulation."
+    },
+    {
+        "id": 78,
+        "ingredient": "Cinnamon",
+        "category": "Spice",
+        "effect_summary": "Blood Sugar Control",
+        "health_effect": "Loaded with antioxidants. Shown to improve insulin sensitivity and lower blood sugar levels. Anti-inflammatory."
+    },
+    {
+        "id": 79,
+        "ingredient": "Ginger",
+        "category": "Spice",
+        "effect_summary": "Digestion / Nausea Relief",
+        "health_effect": "Contains gingerol. Powerful anti-inflammatory and antioxidant properties. Excellent for treating nausea and muscular pain."
+    },
+    {
+        "id": 80,
+        "ingredient": "Turmeric",
+        "category": "Spice",
+        "effect_summary": "Anti-inflammatory / Curcumin",
+        "health_effect": "Main active ingredient is curcumin. Highly effective at fighting chronic inflammation. Best absorbed when eaten with black pepper."
+    },
+    {
+        "id": 81,
+        "ingredient": "Black Pepper",
+        "category": "Spice",
+        "effect_summary": "Piperine / Absorption",
+        "health_effect": "Contains piperine, which boosts the absorption of other nutrients like curcumin by up to 2000%."
+    },
+    {
+        "id": 82,
+        "ingredient": "Paprika",
+        "category": "Spice",
+        "effect_summary": "Vitamin A / Carotenoids",
+        "health_effect": "Rich in Vitamin A and capsaicin. Supports eye health and may reduce inflammation."
+    },
+    {
+        "id": 83,
+        "ingredient": "Oregano",
+        "category": "Herb",
+        "effect_summary": "Antimicrobial",
+        "health_effect": "Contains carvacrol and thymol, which have strong antibacterial and antifungal properties. Rich in antioxidants."
+    },
+    {
+        "id": 84,
+        "ingredient": "Thyme",
+        "category": "Herb",
+        "effect_summary": "Immune Support",
+        "health_effect": "Rich in Vitamins C and A. Often used to treat respiratory symptoms and support immunity."
+    },
+    {
+        "id": 85,
+        "ingredient": "Rosemary",
+        "category": "Herb",
+        "effect_summary": "Brain Health / Memory",
+        "health_effect": "May help improve memory and concentration. Contains rosmarinic acid, which has antioxidant and anti-inflammatory effects."
+    },
+    {
+        "id": 86,
+        "ingredient": "Natural Flavor",
+        "category": "Flavoring",
+        "effect_summary": "Essential Oils / Extracts",
+        "health_effect": "Derived from plant or animal sources. While 'natural', it can include hundreds of chemicals as processing aids. Generally safe, but opaque."
+    },
+    {
+        "id": 87,
+        "ingredient": "Artificial Flavor",
+        "category": "Flavoring",
+        "effect_summary": "Synthetic Chemicals",
+        "health_effect": "Man-made flavorings designed to mimic natural tastes. Generally safe in food amounts, but lacks the beneficial compounds found in real food."
+    },
+    {
+        "id": 88,
+        "ingredient": "Vanilla Extract",
+        "category": "Flavoring",
+        "effect_summary": "Antioxidant",
+        "health_effect": "Made by macerating vanilla beans in alcohol. Contains vanillin, which has antioxidant effects. Soothing aroma."
+    },
+    {
+        "id": 89,
+        "ingredient": "Sodium Bicarbonate (Baking Soda)",
+        "category": "Leavening Agent",
+        "effect_summary": "Rise / Antacid",
+        "health_effect": "Commonly used in baking to make dough rise. Also used medically as an antacid. Adds sodium to the diet."
+    },
+    {
+        "id": 90,
+        "ingredient": "Monocalcium Phosphate",
+        "category": "Leavening Agent",
+        "effect_summary": "Baking Aid",
+        "health_effect": "Used in baking powders. Provides calcium and phosphorus. Generally safe."
+    },
+    {
+        "id": 91,
+        "ingredient": "Calcium Carbonate",
+        "category": "Mineral / Colorant",
+        "effect_summary": "Calcium Source",
+        "health_effect": "Used as a white food color or calcium supplement. Generally safe, but excessive intake can lead to kidney stones."
+    },
+    {
+        "id": 92,
+        "ingredient": "Ferrous Sulfate",
+        "category": "Mineral",
+        "effect_summary": "Iron Source",
+        "health_effect": "Used to fortify foods with iron. Essential for preventing anemia, but can cause digestive upset in high doses."
+    },
+    {
+        "id": 93,
+        "ingredient": "Potassium Chloride",
+        "category": "Mineral",
+        "effect_summary": "Salt Substitute",
+        "health_effect": "Used to reduce sodium content while maintaining a salty taste. Provides potassium, which many lack, but must be limited by people with kidney issues."
+    },
+    {
+        "id": 94,
+        "ingredient": "Magnesium Stearate",
+        "category": "Processing Aid / Flow Agent",
+        "effect_summary": "Additive",
+        "health_effect": "Used to prevent ingredients from sticking to equipment during production. Generally safe in the tiny amounts found in food."
+    },
+    {
+        "id": 95,
+        "ingredient": "Phosphoric Acid",
+        "category": "Acidity Regulator",
+        "effect_summary": "Tartness / Bone Health Concern",
+        "health_effect": "Used in sodas to provide tartness. High intake is linked to lower bone density and kidney stones due to high phosphorus levels."
+    },
+    {
+        "id": 96,
+        "ingredient": "Lactic Acid",
+        "category": "Acidity Regulator",
+        "effect_summary": "Preservative / Fermentation",
+        "health_effect": "Produced during fermentation. Used to control acidity and inhibit spoilage. Generally very safe."
+    },
+    {
+        "id": 97,
+        "ingredient": "Apple Puree",
+        "category": "Fruit",
+        "effect_summary": "Fiber / Vitamins",
+        "health_effect": "A healthy base for snacks. Rich in Vitamin C and fiber (pectin). Supports heart and lung health."
+    },
+    {
+        "id": 98,
+        "ingredient": "Date Paste",
+        "category": "Fruit",
+        "effect_summary": "Natural Sweetener",
+        "health_effect": "High in fiber and minerals like potassium and magnesium. A great whole-food alternative to refined sugar."
+    },
+    {
+        "id": 99,
+        "ingredient": "Lemon Juice",
+        "category": "Fruit",
+        "effect_summary": "Vitamin C / Preservative",
+        "health_effect": "Rich in Vitamin C. Acts as a natural preservative and flavor enhancer. Supports skin health and digestion."
+    },
+    {
+        "id": 100,
+        "ingredient": "Beet Powder",
+        "category": "Vegetable",
+        "effect_summary": "Nitrates / Blood Pressure",
+        "health_effect": "Rich in dietary nitrates, which convert to nitric oxide in the body, helping to lower blood pressure and improve athletic performance."
+    },
+    {
+        "id": 101,
+        "ingredient": "Spinach Powder",
+        "category": "Vegetable",
+        "effect_summary": "Nutrient Dense",
+        "health_effect": "Concentrated source of Vitamins K, A, and C, as well as iron and calcium. Supports bone and eye health."
+    },
+    {
+        "id": 102,
+        "ingredient": "Cranberry Extract",
+        "category": "Fruit",
+        "effect_summary": "Urinary Health",
+        "health_effect": "Contains proanthocyanidins, which help prevent UTIs. High in antioxidants."
+    },
+    {
+        "id": 103,
+        "ingredient": "Niacin (Vitamin B3)",
+        "category": "Vitamin",
+        "effect_summary": "Metabolism",
+        "health_effect": "Essential for converting food into energy and supporting the nervous system. Often added to enriched flours."
+    },
+    {
+        "id": 104,
+        "ingredient": "Riboflavin (Vitamin B2)",
+        "category": "Vitamin",
+        "effect_summary": "Energy Production",
+        "health_effect": "Helps the body break down carbohydrates, proteins, and fats to produce energy. Keeps skin and eyes healthy."
+    },
+    {
+        "id": 105,
+        "ingredient": "Thiamine Mononitrate (Vitamin B1)",
+        "category": "Vitamin",
+        "effect_summary": "Nerve Function",
+        "health_effect": "Essential for energy metabolism and heart, muscle, and nerve function. Critical for brain health."
+    },
+    {
+        "id": 106,
+        "ingredient": "Folic Acid",
+        "category": "Vitamin",
+        "effect_summary": "Cell Division",
+        "health_effect": "Synthetic form of Folate. Crucial for DNA synthesis and preventing birth defects. Often added to grains by law in many countries."
+    },
+    {
+        "id": 107,
+        "ingredient": "Vitamin C (Ascorbic Acid)",
+        "category": "Vitamin / Antioxidant",
+        "effect_summary": "Immunity / Skin",
+        "health_effect": "Powerful antioxidant. Necessary for collagen production and immune function. Also acts as a natural food preservative."
+    },
+    {
+        "id": 108,
+        "ingredient": "Vitamin E (Tocopherols)",
+        "category": "Vitamin / Antioxidant",
+        "effect_summary": "Cell Protection",
+        "health_effect": "Protects cells from oxidative stress. Often added to oils to prevent rancidity. Supports skin and eye health."
+    },
+    {
+        "id": 109,
+        "ingredient": "Vitamin D3",
+        "category": "Vitamin",
+        "effect_summary": "Bone Health",
+        "health_effect": "Necessary for calcium absorption. Essential for bone strength and immune function. Many people are deficient."
+    },
+    {
+        "id": 110,
+        "ingredient": "Vitamin B12 (Cobalamin)",
+        "category": "Vitamin",
+        "effect_summary": "Nerve / Blood",
+        "health_effect": "Essential for red blood cell formation and neurological function. Primarily found in animal products; often fortified in vegan foods."
+    },
+    {
+        "id": 111,
+        "ingredient": "Yeast Extract",
+        "category": "Flavor Enhancer",
+        "effect_summary": "Umami / MSG-like",
+        "health_effect": "Concentrated cell contents of yeast. Rich in glutamates, providing a savory taste. A common alternative to MSG."
+    },
+    {
+        "id": 112,
+        "ingredient": "Autolyzed Yeast",
+        "category": "Flavor Enhancer",
+        "effect_summary": "Savory Taste",
+        "health_effect": "Similar to yeast extract. Used to enhance meat-like flavors. High in glutamic acid."
+    },
+    {
+        "id": 113,
+        "ingredient": "Hydrolyzed Vegetable Protein (HVP)",
+        "category": "Flavor Enhancer",
+        "effect_summary": "Protein Source / MSG",
+        "health_effect": "Made by boiling cereals or legumes in acid. Used to enhance savory flavors. Contains MSG as a naturally occurring byproduct."
+    },
+    {
+        "id": 114,
+        "ingredient": "Disodium Inosinate",
+        "category": "Flavor Enhancer",
+        "effect_summary": "Umami Synergy",
+        "health_effect": "Used in combination with MSG and Disodium Guanylate to create a powerful savory effect. Derived from meat or fish (usually)."
+    },
+    {
+        "id": 115,
+        "ingredient": "Disodium Guanylate",
+        "category": "Flavor Enhancer",
+        "effect_summary": "Umami Synergy",
+        "health_effect": "Works with MSG and Disodium Inosinate to enhance flavor. Often derived from seaweed or yeast."
+    },
+    {
+        "id": 116,
+        "ingredient": "Ethyl Vanillin",
+        "category": "Flavoring",
+        "effect_summary": "Super Vanilla",
+        "health_effect": "A synthetic molecule that is several times stronger than natural vanillin. Used to provide a powerful vanilla scent and taste."
+    },
+    {
+        "id": 117,
+        "ingredient": "Caramel Color (Class IV)",
+        "category": "Colorant",
+        "effect_summary": "Brown Tint / Controversy",
+        "health_effect": "The most widely used food color in the world. Class IV (used in colas) contains 4-MEI, a potential carcinogen, though levels in food are strictly regulated."
+    },
+    {
+        "id": 118,
+        "ingredient": "Annatto",
+        "category": "Natural Color",
+        "effect_summary": "Yellow-Orange",
+        "health_effect": "Derived from the seeds of the achiote tree. Used to color cheese and butter. Generally safe, but can cause rare allergic reactions."
+    },
+    {
+        "id": 119,
+        "ingredient": "Titanium Dioxide",
+        "category": "Colorant",
+        "effect_summary": "Bright White / Health Concern",
+        "health_effect": "Used to make foods look whiter and brighter. Banned as a food additive in the EU due to concerns about nanoparticle accumulation and DNA damage."
+    },
+    {
+        "id": 120,
+        "ingredient": "Castoreum",
+        "category": "Natural Flavor",
+        "effect_summary": "Vanilla/Berry enhancer",
+        "health_effect": "A secretion from beaver scent glands. Rarely used today due to cost, but technically considered a 'natural flavor'. Most vanilla flavor is now synthetic or plant-based."
+    },
+    {
+        "id": 121,
+        "ingredient": "Schellac (Confectioner's Glaze)",
+        "category": "Glaze",
+        "effect_summary": "Shiny Coating",
+        "health_effect": "A resin secreted by the female lac bug. Used to give candies a shiny, hard shell. Generally safe but not vegan."
+    },
+    {
+        "id": 122,
+        "ingredient": "Cochineal Extract (Carmine)",
+        "category": "Natural Color",
+        "effect_summary": "Vibrant Red",
+        "health_effect": "A dye made from crushed cochineal insects. Very stable color. Must be labeled due to being a significant allergen for some."
+    },
+    {
+        "id": 123,
+        "ingredient": "Maltodextrin",
+        "category": "Thickener / Filler",
+        "effect_summary": "Stability / High Glycemic",
+        "health_effect": "A highly processed carbohydrate used as a filler or thickener. Can cause spikes in blood sugar; has a higher glycemic index than table sugar."
+    },
+    {
+        "id": 124,
+        "ingredient": "Inulin",
+        "category": "Fiber / Prebiotic",
+        "effect_summary": "Gut Health",
+        "health_effect": "A soluble fiber often extracted from chicory root. Acts as a prebiotic. Can cause digestive gas and bloating in sensitive individuals."
+    },
+    {
+        "id": 125,
+        "ingredient": "Enzymes",
+        "category": "Processing Aid",
+        "effect_summary": "Texture / Fermentation",
+        "health_effect": "Proteins that speed up chemical reactions (e.g., breaking down starch into sugar in bread). Generally safe as they are used in tiny amounts."
+    },
+    {
+        "id": 126,
+        "ingredient": "Modified Whey",
+        "category": "Dairy Derivative / Protein",
+        "effect_summary": "Texture",
+        "health_effect": "Whey protein that has been altered. Used as a binder or protein source. Essential allergen (Milk)."
+    },
+    {
+        "id": 127,
+        "ingredient": "Casein",
+        "category": "Dairy Protein",
+        "effect_summary": "Muscle Building / Emulsifier",
+        "health_effect": "The main protein in milk. Used in bars and shakes. High in amino acids but a common allergen."
+    },
+    {
+        "id": 128,
+        "ingredient": "Whey Protein Isolate",
+        "category": "Dairy Protein",
+        "effect_summary": "High Protein / Fast Absorption",
+        "health_effect": "Concentrated milk protein. Excellent for muscle recovery. Contains minimal lactose but still an allergen (Milk)."
+    },
+    {
+        "id": 129,
+        "ingredient": "Pink Himalayan Salt",
+        "category": "Mineral / Seasoning",
+        "effect_summary": "Trace Minerals",
+        "health_effect": "Salt that contains small amounts of iron oxide (giving it a pink color) and other trace minerals. Health benefits over regular salt are largely exaggerated."
+    },
+    {
+        "id": 130,
+        "ingredient": "Celery Juice Powder",
+        "category": "Preservative",
+        "effect_summary": "Natural Nitrate Source",
+        "health_effect": "Used in 'nitrate-free' meats as a natural source of nitrates. Once added to meat, it performs the same function as sodium nitrite."
+    },
+    {
+        "id": 131,
+        "ingredient": "Almonds",
+        "category": "Nut",
+        "effect_summary": "Healthy Fats / Vitamin E",
+        "health_effect": "High in monounsaturated fats, fiber, and Vitamin E. Good for heart health and satiety. Major allergen."
+    },
+    {
+        "id": 132,
+        "ingredient": "Walnuts",
+        "category": "Nut",
+        "effect_summary": "Omega-3s / Brain Health",
+        "health_effect": "Significant source of ALA (plant-based Omega-3). Excellent for reducing inflammation and supporting brain function. Major allergen."
+    },
+    {
+        "id": 133,
+        "ingredient": "Peanuts",
+        "category": "Legume / Nut",
+        "effect_summary": "Protein / Fats",
+        "health_effect": "Technically a legume. High in protein and healthy fats. Most common life-threatening food allergen."
+    },
+    {
+        "id": 134,
+        "ingredient": "Cashews",
+        "category": "Nut",
+        "effect_summary": "Minerals / Creaminess",
+        "health_effect": "Lower in fat than most nuts. Rich in copper and magnesium. Often used to make vegan dairy alternatives."
+    },
+    {
+        "id": 135,
+        "ingredient": "Pistachios",
+        "category": "Nut",
+        "effect_summary": "Antioxidants / Eye Health",
+        "health_effect": "Rich in lutein and zeaxanthin. Good for heart health and blood sugar management. Major allergen."
+    },
+    {
+        "id": 136,
+        "ingredient": "Chia Seeds",
+        "category": "Seed",
+        "effect_summary": "Fiber / Omega-3",
+        "health_effect": "A superfood high in fiber and ALA. Absorbs 12 times its weight in water, helping with hydration and satiety."
+    },
+    {
+        "id": 137,
+        "ingredient": "Hemp Seeds",
+        "category": "Seed",
+        "effect_summary": "Protein / Omega Balance",
+        "health_effect": "Contain a perfect ratio of Omega-6 to Omega-3. High in plant protein and magnesium."
+    },
+    {
+        "id": 138,
+        "ingredient": "Pumpkin Seeds (Pepitas)",
+        "category": "Seed",
+        "effect_summary": "Zinc / Magnesium",
+        "health_effect": "Excellent source of minerals. Supports prostate health and immune function."
+    },
+    {
+        "id": 139,
+        "ingredient": "Arugula",
+        "category": "Vegetable",
+        "effect_summary": "Nitrates / Glucosinolates",
+        "health_effect": "A peppery green rich in Vitamin K and nitrates. Supports bone and cardiovascular health."
+    },
+    {
+        "id": 140,
+        "ingredient": "Kale",
+        "category": "Vegetable",
+        "effect_summary": "Nutrient Powerhouse",
+        "health_effect": "Extremely dense in Vitamins K, A, and C. High in antioxidants like quercetin. Supports detoxification."
+    },
+    {
+        "id": 141,
+        "ingredient": "Broccoli",
+        "category": "Vegetable",
+        "effect_summary": "Sulforaphane / Fiber",
+        "health_effect": "Contains sulforaphane, which may have anti-cancer properties. High in fiber and Vitamin C."
+    },
+    {
+        "id": 142,
+        "ingredient": "Brussels Sprouts",
+        "category": "Vegetable",
+        "effect_summary": "Fiber / Vitamin K",
+        "health_effect": "Rich in sulfur compounds and fiber. Supports DNA repair and bone health."
+    },
+    {
+        "id": 143,
+        "ingredient": "Cauliflower",
+        "category": "Vegetable",
+        "effect_summary": "Choline / Low Carb",
+        "health_effect": "High in fiber and choline, which is essential for brain development and metabolism."
+    },
+    {
+        "id": 144,
+        "ingredient": "Blueberries",
+        "category": "Fruit",
+        "effect_summary": "Anthocyanins",
+        "health_effect": "High in antioxidants that protect the brain and heart. Low in calories but high in nutrients."
+    },
+    {
+        "id": 145,
+        "ingredient": "Strawberries",
+        "category": "Fruit",
+        "effect_summary": "Vitamin C / Manganese",
+        "health_effect": "Rich in polyphenols and Vitamin C. Supports heart health and blood sugar control."
+    },
+    {
+        "id": 146,
+        "ingredient": "Raspberries",
+        "category": "Fruit",
+        "effect_summary": "Fiber / Ellagic Acid",
+        "health_effect": "Extremely high in fiber. Contains ellagic acid, which has anti-inflammatory properties."
+    },
+    {
+        "id": 147,
+        "ingredient": "Kiwi",
+        "category": "Fruit",
+        "effect_summary": "Vitamin C / Digestion",
+        "health_effect": "Contains actinidin, an enzyme that helps with protein digestion. Very high in Vitamin C."
+    },
+    {
+        "id": 148,
+        "ingredient": "Pineapple",
+        "category": "Fruit",
+        "effect_summary": "Bromelain / Vitamin C",
+        "health_effect": "Contains bromelain, an enzyme that reduces inflammation and swelling. Supports digestion."
+    },
+    {
+        "id": 149,
+        "ingredient": "Mango",
+        "category": "Fruit",
+        "effect_summary": "Beta-carotene",
+        "health_effect": "Rich in Vitamin A and C. Supports immune function and eye health."
+    },
+    {
+        "id": 150,
+        "ingredient": "Papaya",
+        "category": "Fruit",
+        "effect_summary": "Papain / Immunity",
+        "health_effect": "Contains papain, an enzyme that aids digestion. High in Vitamin C and lycopene."
+    },
+    {
+        "id": 151,
+        "ingredient": "Acai Berry",
+        "category": "Fruit",
+        "effect_summary": "Antioxidants / Fats",
+        "health_effect": "Unique fruit that is high in healthy fats and low in sugar. Extremely high antioxidant content."
+    },
+    {
+        "id": 152,
+        "ingredient": "Goji Berries",
+        "category": "Fruit",
+        "effect_summary": "Immunity / Eye Health",
+        "health_effect": "Long used in traditional medicine. Rich in zeaxanthin and Vitamin A."
+    },
+    {
+        "id": 153,
+        "ingredient": "Pomegranate",
+        "category": "Fruit",
+        "effect_summary": "Punicalagins / Heart Health",
+        "health_effect": "Contains potent antioxidants that support blood flow and arterial health."
+    },
+    {
+        "id": 98,
+        "ingredient": "Date Paste",
+        "category": "Fruit",
+        "effect_summary": "Natural Sweetener",
+        "health_effect": "High in fiber and minerals like potassium and magnesium. A great whole-food alternative to refined sugar."
+    },
+    {
+        "id": 99,
+        "ingredient": "Lemon Juice",
+        "category": "Fruit",
+        "effect_summary": "Vitamin C / Preservative",
+        "health_effect": "Rich in Vitamin C. Acts as a natural preservative and flavor enhancer. Supports skin health and digestion."
+    },
+    {
+        "id": 100,
+        "ingredient": "Beet Powder",
+        "category": "Vegetable",
+        "effect_summary": "Nitrates / Blood Pressure",
+        "health_effect": "Rich in dietary nitrates, which convert to nitric oxide in the body, helping to lower blood pressure and improve athletic performance."
+    },
+    {
+        "id": 101,
+        "ingredient": "Spinach Powder",
+        "category": "Vegetable",
+        "effect_summary": "Nutrient Dense",
+        "health_effect": "Concentrated source of Vitamins K, A, and C, as well as iron and calcium. Supports bone and eye health."
+    },
+    {
+        "id": 102,
+        "ingredient": "Cranberry Extract",
+        "category": "Fruit",
+        "effect_summary": "Urinary Health",
+        "health_effect": "Contains proanthocyanidins, which help prevent UTIs. High in antioxidants."
+    },
+    {
+        "id": 103,
+        "ingredient": "Niacin (Vitamin B3)",
+        "category": "Vitamin",
+        "effect_summary": "Metabolism",
+        "health_effect": "Essential for converting food into energy and supporting the nervous system. Often added to enriched flours."
+    },
+    {
+        "id": 104,
+        "ingredient": "Riboflavin (Vitamin B2)",
+        "category": "Vitamin",
+        "effect_summary": "Energy Production",
+        "health_effect": "Helps the body break down carbohydrates, proteins, and fats to produce energy. Keeps skin and eyes healthy."
+    },
+    {
+        "id": 105,
+        "ingredient": "Thiamine Mononitrate (Vitamin B1)",
+        "category": "Vitamin",
+        "effect_summary": "Nerve Function",
+        "health_effect": "Essential for energy metabolism and heart, muscle, and nerve function. Critical for brain health."
+    },
+    {
+        "id": 106,
+        "ingredient": "Folic Acid",
+        "category": "Vitamin",
+        "effect_summary": "Cell Division",
+        "health_effect": "Synthetic form of Folate. Crucial for DNA synthesis and preventing birth defects. Often added to grains by law in many countries."
+    },
+    {
+        "id": 107,
+        "ingredient": "Vitamin C (Ascorbic Acid)",
+        "category": "Vitamin / Antioxidant",
+        "effect_summary": "Immunity / Skin",
+        "health_effect": "Powerful antioxidant. Necessary for collagen production and immune function. Also acts as a natural food preservative."
+    },
+    {
+        "id": 108,
+        "ingredient": "Vitamin E (Tocopherols)",
+        "category": "Vitamin / Antioxidant",
+        "effect_summary": "Cell Protection",
+        "health_effect": "Protects cells from oxidative stress. Often added to oils to prevent rancidity. Supports skin and eye health."
+    },
+    {
+        "id": 109,
+        "ingredient": "Vitamin D3",
+        "category": "Vitamin",
+        "effect_summary": "Bone Health",
+        "health_effect": "Necessary for calcium absorption. Essential for bone strength and immune function. Many people are deficient."
+    },
+    {
+        "id": 110,
+        "ingredient": "Vitamin B12 (Cobalamin)",
+        "category": "Vitamin",
+        "effect_summary": "Nerve / Blood",
+        "health_effect": "Essential for red blood cell formation and neurological function. Primarily found in animal products; often fortified in vegan foods."
+    },
+    {
+        "id": 111,
+        "ingredient": "Yeast Extract",
+        "category": "Flavor Enhancer",
+        "effect_summary": "Umami / MSG-like",
+        "health_effect": "Concentrated cell contents of yeast. Rich in glutamates, providing a savory taste. A common alternative to MSG."
+    },
+    {
+        "id": 112,
+        "ingredient": "Autolyzed Yeast",
+        "category": "Flavor Enhancer",
+        "effect_summary": "Savory Taste",
+        "health_effect": "Similar to yeast extract. Used to enhance meat-like flavors. High in glutamic acid."
+    },
+    {
+        "id": 113,
+        "ingredient": "Hydrolyzed Vegetable Protein (HVP)",
+        "category": "Flavor Enhancer",
+        "effect_summary": "Protein Source / MSG",
+        "health_effect": "Made by boiling cereals or legumes in acid. Used to enhance savory flavors. Contains MSG as a naturally occurring byproduct."
+    },
+    {
+        "id": 114,
+        "ingredient": "Disodium Inosinate",
+        "category": "Flavor Enhancer",
+        "effect_summary": "Umami Synergy",
+        "health_effect": "Used in combination with MSG and Disodium Guanylate to create a powerful savory effect. Derived from meat or fish (usually)."
+    },
+    {
+        "id": 115,
+        "ingredient": "Disodium Guanylate",
+        "category": "Flavor Enhancer",
+        "effect_summary": "Umami Synergy",
+        "health_effect": "Works with MSG and Disodium Inosinate to enhance flavor. Often derived from seaweed or yeast."
+    },
+    {
+        "id": 116,
+        "ingredient": "Ethyl Vanillin",
+        "category": "Flavoring",
+        "effect_summary": "Super Vanilla",
+        "health_effect": "A synthetic molecule that is several times stronger than natural vanillin. Used to provide a powerful vanilla scent and taste."
+    },
+    {
+        "id": 117,
+        "ingredient": "Caramel Color (Class IV)",
+        "category": "Colorant",
+        "effect_summary": "Brown Tint / Controversy",
+        "health_effect": "The most widely used food color in the world. Class IV (used in colas) contains 4-MEI, a potential carcinogen, though levels in food are strictly regulated."
+    },
+    {
+        "id": 118,
+        "ingredient": "Annatto",
+        "category": "Natural Color",
+        "effect_summary": "Yellow-Orange",
+        "health_effect": "Derived from the seeds of the achiote tree. Used to color cheese and butter. Generally safe, but can cause rare allergic reactions."
+    },
+    {
+        "id": 119,
+        "ingredient": "Titanium Dioxide",
+        "category": "Colorant",
+        "effect_summary": "Bright White / Health Concern",
+        "health_effect": "Used to make foods look whiter and brighter. Banned as a food additive in the EU due to concerns about nanoparticle accumulation and DNA damage."
+    },
+    {
+        "id": 120,
+        "ingredient": "Castoreum",
+        "category": "Natural Flavor",
+        "effect_summary": "Vanilla/Berry enhancer",
+        "health_effect": "A secretion from beaver scent glands. Rarely used today due to cost, but technically considered a 'natural flavor'. Most vanilla flavor is now synthetic or plant-based."
+    },
+    {
+        "id": 121,
+        "ingredient": "Schellac (Confectioner's Glaze)",
+        "category": "Glaze",
+        "effect_summary": "Shiny Coating",
+        "health_effect": "A resin secreted by the female lac bug. Used to give candies a shiny, hard shell. Generally safe but not vegan."
+    },
+    {
+        "id": 122,
+        "ingredient": "Cochineal Extract (Carmine)",
+        "category": "Natural Color",
+        "effect_summary": "Vibrant Red",
+        "health_effect": "A dye made from crushed cochineal insects. Very stable color. Must be labeled due to being a significant allergen for some."
+    },
+    {
+        "id": 123,
+        "ingredient": "Maltodextrin",
+        "category": "Thickener / Filler",
+        "effect_summary": "Stability / High Glycemic",
+        "health_effect": "A highly processed carbohydrate used as a filler or thickener. Can cause spikes in blood sugar; has a higher glycemic index than table sugar."
+    },
+    {
+        "id": 124,
+        "ingredient": "Inulin",
+        "category": "Fiber / Prebiotic",
+        "effect_summary": "Gut Health",
+        "health_effect": "A soluble fiber often extracted from chicory root. Acts as a prebiotic. Can cause digestive gas and bloating in sensitive individuals."
+    },
+    {
+        "id": 125,
+        "ingredient": "Enzymes",
+        "category": "Processing Aid",
+        "effect_summary": "Texture / Fermentation",
+        "health_effect": "Proteins that speed up chemical reactions (e.g., breaking down starch into sugar in bread). Generally safe as they are used in tiny amounts."
+    },
+    {
+        "id": 154,
+        "ingredient": "Cardamom",
+        "category": "Spice",
+        "effect_summary": "Digestion / Breath",
+        "health_effect": "Helps with digestive issues and may lower blood pressure. Often used for its aromatic flavor."
+    },
+    {
+        "id": 155,
+        "ingredient": "Cloves",
+        "category": "Spice",
+        "effect_summary": "Antioxidant / Oral Health",
+        "health_effect": "Highest antioxidant content among spices. Contains eugenol, often used in dentistry for pain relief."
+    },
+    {
+        "id": 156,
+        "ingredient": "Nutmeg",
+        "category": "Spice",
+        "effect_summary": "Digestion / Sleep",
+        "health_effect": "Used in small amounts to aid digestion. Large doses can be toxic and hallucinogenic."
+    },
+    {
+        "id": 157,
+        "ingredient": "Cumin",
+        "category": "Spice",
+        "effect_summary": "Iron / Digestion",
+        "health_effect": "Rich in iron. Helps stimulate digestive enzymes and improve gut health."
+    },
+    {
+        "id": 158,
+        "ingredient": "Coriander",
+        "category": "Spice / Herb",
+        "effect_summary": "Antioxidant / Heart Health",
+        "health_effect": "Seeds (spice) and leaves (cilantro). Helps lower blood sugar and supports immunity."
+    },
+    {
+        "id": 159,
+        "ingredient": "Fennel",
+        "category": "Spice / Vegetable",
+        "effect_summary": "Anethole / Digestion",
+        "health_effect": "Contains anethole, which has anti-inflammatory properties. Often used to reduce gas and bloating."
+    },
+    {
+        "id": 160,
+        "ingredient": "Mustard Seed",
+        "category": "Spice",
+        "effect_summary": "Selenium / Metabolism",
+        "health_effect": "Rich in selenium and magnesium. Helps boost metabolism and reduce inflammation."
+    },
+    {
+        "id": 161,
+        "ingredient": "Saffron",
+        "category": "Spice",
+        "effect_summary": "Mood / Antioxidant",
+        "health_effect": "The world's most expensive spice. Shown to improve mood and symptoms of depression."
+    },
+    {
+        "id": 162,
+        "ingredient": "Bay Leaves",
+        "category": "Herb",
+        "effect_summary": "Digestion",
+        "health_effect": "Contains compounds that help break down proteins and soothe the stomach."
+    },
+    {
+        "id": 163,
+        "ingredient": "Mint",
+        "category": "Herb",
+        "effect_summary": "Menthol / Digestion",
+        "health_effect": "Relaxes the muscles of the digestive tract. Excellent for Irritable Bowel Syndrome (IBS) symptoms."
+    },
+    {
+        "id": 164,
+        "ingredient": "Sage",
+        "category": "Herb",
+        "effect_summary": "Memory / Mouth Health",
+        "health_effect": "Used for improving brain function and treating sore throats. High in antioxidants."
+    },
+    {
+        "id": 165,
+        "ingredient": "Lemon Balm",
+        "category": "Herb",
+        "effect_summary": "Calming / Sleep",
+        "health_effect": "A member of the mint family. Reduces stress and anxiety and helps promote sleep."
+    },
+    {
+        "id": 166,
+        "ingredient": "Calcium Disodium EDTA",
+        "category": "Preservative / Sequestrant",
+        "effect_summary": "Color & Flavor Protection",
+        "health_effect": "Binds to minerals to prevent them from causing odors or discoloration. Generally safe, but can deplete minerals in high amounts."
+    },
+    {
+        "id": 167,
+        "ingredient": "Sodium Acid Pyrophosphate",
+        "category": "Leavening Agent / Color Protector",
+        "effect_summary": "Acidifier",
+        "health_effect": "Used in baking and to keep potatoes from browning. Excessive intake may affect mineral balance."
+    },
+    {
+        "id": 168,
+        "ingredient": "Ammonium Bicarbonate",
+        "category": "Leavening Agent",
+        "effect_summary": "Rise",
+        "health_effect": "Traditional leavening agent for crisp cookies and crackers. Generally safe."
+    },
+    {
+        "id": 169,
+        "ingredient": "Triacetin",
+        "category": "Flavoring Agent / Humectant",
+        "effect_summary": "Solvent",
+        "health_effect": "Used to dissolve flavors in foods. Generally recognized as safe."
+    },
+    {
+        "id": 170,
+        "ingredient": "Polydextrose",
+        "category": "Fiber / Filler",
+        "effect_summary": "Low-Calorie Bulk",
+        "health_effect": "A synthetic fiber used to replace sugar and fat while adding bulk. Can cause bloating in high amounts."
+    },
+    {
+        "id": 171,
+        "ingredient": "Propylene Glycol",
+        "category": "Humectant / Solvent",
+        "effect_summary": "Moisture Retention",
+        "health_effect": "Used to keep foods moist or as a carrier for flavors. Generally safe in food amounts, but a controversial ingredient in some countries."
+    },
+    {
+        "id": 172,
+        "ingredient": "Sorbitan Monostearate",
+        "category": "Emulsifier",
+        "effect_summary": "Mixing Agent",
+        "health_effect": "Synthetically produced emulsifier used to maintain texture in cakes and whipped toppings. Generally safe."
+    },
+    {
+        "id": 173,
+        "ingredient": "Calcium Stearate",
+        "category": "Anti-caking Agent",
+        "effect_summary": "Texture Protector",
+        "health_effect": "Used to prevent ingredients from clumping together. Generally safe."
+    },
+    {
+        "id": 174,
+        "ingredient": "Fructose",
+        "category": "Sweetener",
+        "effect_summary": "Fruit Sugar",
+        "health_effect": "A simple sugar found in fruit. In isolated form (processed), it can contribute to fatty liver disease when consumed in excess."
+    },
+    {
+        "id": 175,
+        "ingredient": "Invert Sugar",
+        "category": "Sweetener",
+        "effect_summary": "High Moisture / Sweetness",
+        "health_effect": "A mixture of glucose and fructose. Used to keep baked goods moist. Similar health profile to table sugar."
+    },
+    {
+        "id": 176,
+        "ingredient": "Grape Juice Concentrate",
+        "category": "Fruit / Sweetener",
+        "effect_summary": "Natural Sugar",
+        "health_effect": "Often used to sweeten 'no sugar added' products. Primarily sugar, though it contains some antioxidants."
+    },
+    {
+        "id": 177,
+        "ingredient": "Apple Juice Concentrate",
+        "category": "Fruit / Sweetener",
+        "effect_summary": "Natural Sugar",
+        "health_effect": "A common sweetener for juices and snacks. High in fructose and calories with minimal fiber."
+    },
+    {
+        "id": 178,
+        "ingredient": "Molasses",
+        "category": "Sweetener",
+        "effect_summary": "Iron / Minerals",
+        "health_effect": "A by-product of sugar refining. Rich in iron, calcium, and magnesium. Healthiest among liquid sweeteners."
+    },
+    {
+        "id": 179,
+        "ingredient": "Shiitake Mushroom",
+        "category": "Fungi",
+        "effect_summary": "Immunity / Lentinan",
+        "health_effect": "Contains lentinan, which supports the immune system. Rich in B vitamins and Vitamin D (if sun-dried)."
+    },
+    {
+        "id": 180,
+        "ingredient": "Reishi Mushroom",
+        "category": "Fungi",
+        "effect_summary": "Stress Relief / Immunity",
+        "health_effect": "Used in traditional medicine to reduce stress and improve sleep. Supports immune health."
+    },
+    {
+        "id": 181,
+        "ingredient": "Lion's Mane Mushroom",
+        "category": "Fungi",
+        "effect_summary": "Brain Health / Nerves",
+        "health_effect": "May stimulate the production of nerve growth factor (NGF). Supports memory and focus."
+    },
+    {
+        "id": 182,
+        "ingredient": "Chaga Mushroom",
+        "category": "Fungi",
+        "effect_summary": "Antioxidant Superhouse",
+        "health_effect": "Extremely high in antioxidants. Supports immune function and anti-inflammation."
+    },
+    {
+        "id": 183,
+        "ingredient": "Nori",
+        "category": "Seaweed",
+        "effect_summary": "Iodine / Vitamin B12",
+        "health_effect": "Commonly used in sushi. Excellent source of iodine and trace minerals. Contains some B12 (rare for plants)."
+    },
+    {
+        "id": 184,
+        "ingredient": "Wakame",
+        "category": "Seaweed",
+        "effect_summary": "Omega-3s / Iodine",
+        "health_effect": "Low in calories, high in nutrients. Contains fucoxanthin, which may help with fat burning."
+    },
+    {
+        "id": 185,
+        "ingredient": "Kelp",
+        "category": "Seaweed",
+        "effect_summary": "Iodine / Minerals",
+        "health_effect": "Extremely high in iodine, which is critical for thyroid function. High in weight-loss-supporting nutrients."
+    },
+    {
+        "id": 186,
+        "ingredient": "Spirulina",
+        "category": "Algae",
+        "effect_summary": "Protein / Chlorophyll",
+        "health_effect": "A nutrient-dense blue-green algae. High in protein, iron, and B-vitamins. Supports detoxification."
+    },
+    {
+        "id": 187,
+        "ingredient": "Chlorella",
+        "category": "Algae",
+        "effect_summary": "Detox / Nutrition",
+        "health_effect": "Rich in chlorophyll and protein. Known for its ability to bind to heavy metals for detoxification."
+    },
+    {
+        "id": 188,
+        "ingredient": "Pea Protein",
+        "category": "Plant Protein",
+        "effect_summary": "Hypoallergenic",
+        "health_effect": "A high-quality protein from yellow peas. Rich in BCAAs. Easy to digest and gluten-free."
+    },
+    {
+        "id": 189,
+        "ingredient": "Rice Protein",
+        "category": "Plant Protein",
+        "effect_summary": "Hypoallergenic",
+        "health_effect": "Often combined with pea protein for a complete amino acid profile. Gentle on the stomach."
+    },
+    {
+        "id": 190,
+        "ingredient": "Quinoa Protein",
+        "category": "Plant Protein",
+        "effect_summary": "Complete Protein",
+        "health_effect": "Contains all essential amino acids. Highly nutritious and gluten-free."
+    },
+    {
+        "id": 191,
+        "ingredient": "Collagen Peptides",
+        "category": "Animal Protein",
+        "effect_summary": "Skin / Joints",
+        "health_effect": "Protein derived from connective tissue. Supports skin elasticity and joint health. Not a complete protein."
+    },
+    {
+        "id": 192,
+        "ingredient": "Egg White Protein",
+        "category": "Animal Protein",
+        "effect_summary": "High Bioavailability",
+        "health_effect": "A complete protein that is easily absorbed. Fat-free and low-carb."
+    },
+    {
+        "id": 193,
+        "ingredient": "Lactobacillus Acidophilus",
+        "category": "Probiotic",
+        "effect_summary": "Gut Health",
+        "health_effect": "Beneficial bacteria that support digestion and immune health. Aids in the breakdown of lactose."
+    },
+    {
+        "id": 194,
+        "ingredient": "Bifidobacterium Lactis",
+        "category": "Probiotic",
+        "effect_summary": "Immunity",
+        "health_effect": "Helps improve digestive regularity and supports the body's immune response."
+    },
+    {
+        "id": 195,
+        "ingredient": "Chicory Root Fiber",
+        "category": "Prebiotic",
+        "effect_summary": "Fiber / Gut Health",
+        "health_effect": "The primary source of inulin. Feeds beneficial gut bacteria. Can cause significant bloating in some."
+    },
+    {
+        "id": 196,
+        "ingredient": "Psyllium Husk",
+        "category": "Fiber",
+        "effect_summary": "Digestive Regularity",
+        "health_effect": "A bulk-forming laxative. Helps lower cholesterol and improves heart and gut health."
+    },
+    {
+        "id": 197,
+        "ingredient": "Distilled Vinegar",
+        "category": "Acidity Regulator",
+        "effect_summary": "Preservative / Tartness",
+        "health_effect": "Made from fermented alcohol. Generally safe; helps stabilize food and adds sharp flavor."
+    },
+    {
+        "id": 198,
+        "ingredient": "Apple Cider Vinegar",
+        "category": "Acidity Regulator",
+        "effect_summary": "Acetic Acid / Health Tonic",
+        "health_effect": "Contains 'the mother' (bacteria/enzymes) if unfiltered. Benefits include blood sugar control and weight loss."
+    },
+    {
+        "id": 199,
+        "ingredient": "Balsamic Vinegar",
+        "category": "Acidity Regulator / Flavor",
+        "effect_summary": "Antioxidant",
+        "health_effect": "Made from grape must. Contains polyphenols. Adds intense flavor without many calories."
+    },
+    {
+        "id": 200,
+        "ingredient": "Soy Sauce",
+        "category": "Fermented Base",
+        "effect_summary": "Umami / Sodium",
+        "health_effect": "Rich in savory flavor but also very high in sodium. Essential allergen (Soy, Wheat)."
+    },
+    {
+        "id": 201,
+        "ingredient": "Tamari",
+        "category": "Fermented Base",
+        "effect_summary": "Gluten-Free Umami",
+        "health_effect": "A variety of soy sauce made with little to no wheat. High in sodium but safe for celiacs."
+    },
+    {
+        "id": 202,
+        "ingredient": "Miso",
+        "category": "Fermented Base",
+        "effect_summary": "Probiotics / Umami",
+        "health_effect": "Fermented soybean paste. Rich in enzymes and beneficial bacteria. High in sodium."
+    },
+    {
+        "id": 203,
+        "ingredient": "Worcestershire Sauce",
+        "category": "Flavoring",
+        "effect_summary": "Complex Umami",
+        "health_effect": "A fermented liquid condiment. Contains anchovies (allergen), vinegar, and spices."
+    },
+    {
+        "id": 204,
+        "ingredient": "Mustard",
+        "category": "Condiment",
+        "effect_summary": "Antioxidant",
+        "health_effect": "Low-calorie condiment made from mustard seeds and vinegar. Contains beneficial phytonutrients."
+    },
+    {
+        "id": 205,
+        "ingredient": "Mayonnaise",
+        "category": "Condiment",
+        "effect_summary": "Fats / Emulsifier",
+        "health_effect": "Made from oil, egg yolk, and vinegar. High in calories. Essential allergen (Egg)."
+    },
+    {
+        "id": 206,
+        "ingredient": "Ketchup",
+        "category": "Condiment",
+        "effect_summary": "Lycopene / High Sugar",
+        "health_effect": "Contains tomato paste (lycopene) but is often very high in sugar and high fructose corn syrup."
+    },
+    {
+        "id": 207,
+        "ingredient": "Rose Water",
+        "category": "Flavoring",
+        "effect_summary": "Aromatic",
+        "health_effect": "Natural floral water. Generally safe and used in Middle Eastern sweets."
+    },
+    {
+        "id": 208,
+        "ingredient": "Orange Blossom Water",
+        "category": "Flavoring",
+        "effect_summary": "Aromatic",
+        "health_effect": "Extracted from orange flowers. Adds a distinct floral note. Generally safe."
+    },
+    {
+        "id": 209,
+        "ingredient": "Cacao Powder",
+        "category": "Base / Flavor",
+        "effect_summary": "Magnesium / Antioxidant",
+        "health_effect": "Raw form of cocoa. Extremely high in antioxidants and magnesium. Supports heart health."
+    },
+    {
+        "id": 210,
+        "ingredient": "Cocoa Butter",
+        "category": "Fat",
+        "effect_summary": "Satiety / Skin Health",
+        "health_effect": "The fat from the cacao bean. Rich in stearic acid, which doesn't raise cholesterol as much as other saturated fats."
+    },
+    {
+        "id": 211,
+        "ingredient": "Dark Chocolate (70%+)",
+        "category": "Base",
+        "effect_summary": "Flavonoids",
+        "health_effect": "Rich in antioxidants that support blood flow and heart health. Lower in sugar than milk chocolate."
+    },
+    {
+        "id": 212,
+        "ingredient": "Coconut Water",
+        "category": "Base",
+        "effect_summary": "Electrolytes",
+        "health_effect": "Naturally high in potassium and magnesium. A great natural alternative to sports drinks."
+    },
+    {
+        "id": 213,
+        "ingredient": "Goat Milk",
+        "category": "Base",
+        "effect_summary": "Digestion / Protein",
+        "health_effect": "Often easier to digest than cow milk for some people. High in calcium and protein. Essential allergen (Milk)."
+    },
+    {
+        "id": 214,
+        "ingredient": "Almond Milk",
+        "category": "Base",
+        "effect_summary": "Low Calorie",
+        "health_effect": "Made from almonds and water. Naturally low in calories but often fortified with vitamins. Major allergen."
+    },
+    {
+        "id": 215,
+        "ingredient": "Oat Milk",
+        "category": "Base",
+        "effect_summary": "Fiber / Creaminess",
+        "health_effect": "High in fiber and creamy texture. Naturally sweet. Often fortified."
+    },
+    {
+        "id": 216,
+        "ingredient": "Cashew Milk",
+        "category": "Base",
+        "effect_summary": "Creaminess",
+        "health_effect": "Very creamy and versatile. Naturally high in healthy fats. Major allergen."
+    },
+    {
+        "id": 217,
+        "ingredient": "Pumpkin Puree",
+        "category": "Vegetable",
+        "effect_summary": "Vitamin A",
+        "health_effect": "Extremely rich in beta-carotene. High in fiber and low in calories."
+    },
+    {
+        "id": 218,
+        "ingredient": "Sweet Potato",
+        "category": "Vegetable",
+        "effect_summary": "Vitamin A / Fiber",
+        "health_effect": "Excellent source of complex carbs and Vitamin A. Supports skin and immune health."
+    },
+    {
+        "id": 219,
+        "ingredient": "Carrot Puree",
+        "category": "Vegetable",
+        "effect_summary": "Beta-carotene",
+        "health_effect": "Rich in antioxidants and Vitamin A. Supports eye health."
+    },
+    {
+        "id": 220,
+        "ingredient": "Celery Juice",
+        "category": "Vegetable",
+        "effect_summary": "Hydration",
+        "health_effect": "Low calorie and hydrating. Contains antioxidants like apigenin and luteolin."
+    },
+    {
+        "id": 221,
+        "ingredient": "Watercress",
+        "category": "Vegetable",
+        "effect_summary": "Vitamin K",
+        "health_effect": "Highest nutrient density score of any vegetable. Supports bone and cardiovascular health."
+    },
+    {
+        "id": 222,
+        "ingredient": "Cabbage",
+        "category": "Vegetable",
+        "effect_summary": "Vitamin C / Sulfur",
+        "health_effect": "Supports detoxification and gut health. Rich in fiber."
+    },
+    {
+        "id": 223,
+        "ingredient": "Red Onion",
+        "category": "Vegetable",
+        "effect_summary": "Quercetin",
+        "health_effect": "Contains more antioxidants than white onions. Supports immune and heart health."
+    },
+    {
+        "id": 224,
+        "ingredient": "Shallots",
+        "category": "Vegetable",
+        "effect_summary": "Flavor / Nutrients",
+        "health_effect": "More concentrated in antioxidants than onions. Rich in Vitamin A and B6."
+    },
+    {
+        "id": 225,
+        "ingredient": "Leeks",
+        "category": "Vegetable",
+        "effect_summary": "Kaempferol",
+        "health_effect": "Contains kaempferol, which protects blood vessel linings. Supports heart health."
+    },
+    {
+        "id": 226,
+        "ingredient": "Bell Pepper",
+        "category": "Vegetable",
+        "effect_summary": "Vitamin C",
+        "health_effect": "Extremely high in Vitamin C. Red peppers contain the most nutrients."
+    },
+    {
+        "id": 227,
+        "ingredient": "Jalape\u00f1o",
+        "category": "Vegetable",
+        "effect_summary": "Capsaicin",
+        "health_effect": "Contains capsaicin, which boosts metabolism and reduces pain."
+    },
+    {
+        "id": 228,
+        "ingredient": "Chili Powder",
+        "category": "Spice",
+        "effect_summary": "Capsaicin / Vitamin A",
+        "health_effect": "A blend of spices. Supports metabolism and immune function."
+    },
+    {
+        "id": 229,
+        "ingredient": "Cayenne Pepper",
+        "category": "Spice",
+        "effect_summary": "Capsaicin",
+        "health_effect": "Strong metabolism booster. Helps reduce hunger and lower blood pressure."
+    },
+    {
+        "id": 230,
+        "ingredient": "Peppermint Extract",
+        "category": "Flavoring",
+        "effect_summary": "Menthol",
+        "health_effect": "Potent flavor. Supports digestion and can help treat headaches."
+    },
+    {
+        "id": 231,
+        "ingredient": "Spearmint",
+        "category": "Herb",
+        "effect_summary": "Antioxidant",
+        "health_effect": "Sweeter than peppermint. Supports hormone balance and digestion."
+    },
+    {
+        "id": 232,
+        "ingredient": "Dill",
+        "category": "Herb",
+        "effect_summary": "Flavonoids",
+        "health_effect": "Often used to treat digestive issues. Rich in Vitamin C and A."
+    },
+    {
+        "id": 233,
+        "ingredient": "Parsley",
+        "category": "Herb",
+        "effect_summary": "Vitamin K",
+        "health_effect": "Excellent for bone health and may help freshen breath."
+    },
+    {
+        "id": 234,
+        "ingredient": "Cilantro",
+        "category": "Herb",
+        "effect_summary": "Detoxification",
+        "health_effect": "May help the body clear heavy metals. Supports digestive health."
+    },
+    {
+        "id": 235,
+        "ingredient": "Tarragon",
+        "category": "Herb",
+        "effect_summary": "Antioxidant",
+        "health_effect": "Supports heart health and blood sugar regulation."
+    },
+    {
+        "id": 236,
+        "ingredient": "Marjoram",
+        "category": "Herb",
+        "effect_summary": "Anti-inflammatory",
+        "health_effect": "Used for respiratory health and digestive support."
+    },
+    {
+        "id": 237,
+        "ingredient": "Lemongrass",
+        "category": "Herb",
+        "effect_summary": "Antimicrobial",
+        "health_effect": "Used in Asian soups. Supports healthy cholesterol levels and reduces inflammation."
+    },
+    {
+        "id": 238,
+        "ingredient": "Star Anise",
+        "category": "Spice",
+        "effect_summary": "Shikimic Acid / Immunity",
+        "health_effect": "Contains shikimic acid, a precursor to flu medication. Strong antimicrobial properties."
+    },
+    {
+        "id": 239,
+        "ingredient": "Lavender",
+        "category": "Herb",
+        "effect_summary": "Calming",
+        "health_effect": "Used for anxiety and sleep. Generally safe in food amounts."
+    },
+    {
+        "id": 240,
+        "ingredient": "Hibiscus",
+        "category": "Flower",
+        "effect_summary": "Blood Pressure / Antioxidants",
+        "health_effect": "Often consumed as tea. Shown to lower blood pressure and support liver health."
+    },
+    {
+        "id": 241,
+        "ingredient": "Chamomile",
+        "category": "Flower",
+        "effect_summary": "Apigenin / Sleep",
+        "health_effect": "Contains apigenin, which binds to receptors in the brain to promote sleep."
+    },
+    {
+        "id": 242,
+        "ingredient": "Green Tea Extract",
+        "category": "Antioxidant",
+        "effect_summary": "EGCG / Metabolism",
+        "health_effect": "Extremely high in catechins (EGCG). Boosts fat burning and supports brain health."
+    },
+    {
+        "id": 243,
+        "ingredient": "Black Tea Extract",
+        "category": "Antioxidant",
+        "effect_summary": "Theaflavins",
+        "health_effect": "Supports heart health and gut health. Contains caffeine."
+    },
+    {
+        "id": 244,
+        "ingredient": "Guarana",
+        "category": "Stimulant",
+        "effect_summary": "Caffeine",
+        "health_effect": "Extremely high in caffeine. Boosts focus and metabolism. Can cause jitters in high amounts."
+    },
+    {
+        "id": 245,
+        "ingredient": "Yerba Mate",
+        "category": "Stimulant",
+        "effect_summary": "Balanced Caffeine",
+        "health_effect": "Provides caffeine along with vitamins and minerals. Less jittery than coffee for some."
+    },
+    {
+        "id": 246,
+        "ingredient": "Matcha",
+        "category": "Antioxidant",
+        "effect_summary": "L-Theanine / EGCG",
+        "health_effect": "Powdered green tea. Provides a 'calm focus' due to L-theanine. Extremely high in antioxidants."
+    },
+    {
+        "id": 247,
+        "ingredient": "L-Theanine",
+        "category": "Amino Acid",
+        "effect_summary": "Relaxation",
+        "health_effect": "Found in tea. Promotes relaxation without drowsiness. Often paired with caffeine."
+    },
+    {
+        "id": 248,
+        "ingredient": "Taurine",
+        "category": "Amino Acid",
+        "effect_summary": "Energy / Heart Health",
+        "health_effect": "Essential for heart and brain function. Often added to energy drinks. Generally safe."
+    },
+    {
+        "id": 249,
+        "ingredient": "L-Carnitine",
+        "category": "Amino Acid",
+        "effect_summary": "Fat Metabolism",
+        "health_effect": "Helps the body turn fat into energy. Supports heart and brain health."
+    },
+    {
+        "id": 250,
+        "ingredient": "Creatine Monohydrate",
+        "category": "Amino Acid",
+        "effect_summary": "Muscle Power",
+        "health_effect": "One of the most researched supplements. Supports strength, power, and brain health."
+    },
+    {
+        "id": 251,
+        "ingredient": "Beta-Alanine",
+        "category": "Amino Acid",
+        "effect_summary": "Muscle Endurance",
+        "health_effect": "Helps buffer acid in muscles during exercise. Can cause a 'tingling' sensation."
+    },
+    {
+        "id": 252,
+        "ingredient": "Glutamine",
+        "category": "Amino Acid",
+        "effect_summary": "Gut / Immune Health",
+        "health_effect": "Supports the lining of the gut and immune function. Critical during illness or stress."
+    },
+    {
+        "id": 253,
+        "ingredient": "Magnesium Citrate",
+        "category": "Mineral",
+        "effect_summary": "Relaxation / Laxative",
+        "health_effect": "A highly absorbable form of magnesium. Supports sleep and muscle function. In higher doses, acts as a laxative."
+    },
+    {
+        "id": 254,
+        "ingredient": "Magnesium Glycinate",
+        "category": "Mineral",
+        "effect_summary": "Sleep / Calm",
+        "health_effect": "Buffered with glycine. Very gentle on the stomach. Excellent for sleep and anxiety."
+    },
+    {
+        "id": 255,
+        "ingredient": "Zinc Gluconate",
+        "category": "Mineral",
+        "effect_summary": "Immunity",
+        "health_effect": "Essential for immune cell function and wound healing. Common in cold remedies."
+    },
+    {
+        "id": 256,
+        "ingredient": "Selenium",
+        "category": "Mineral",
+        "effect_summary": "Thyroid Health",
+        "health_effect": "Critical for thyroid function and DNA production. Powerful antioxidant."
+    },
+    {
+        "id": 257,
+        "ingredient": "Copper",
+        "category": "Mineral",
+        "effect_summary": "Nerve / Bone Health",
+        "health_effect": "Essential for making red blood cells and maintaining nerve cells and the immune system."
+    },
+    {
+        "id": 258,
+        "ingredient": "Iodine",
+        "category": "Mineral",
+        "effect_summary": "Thyroid Support",
+        "health_effect": "Necessary for the production of thyroid hormones. Found in seaweed and iodized salt."
+    },
+    {
+        "id": 259,
+        "ingredient": "Manganese",
+        "category": "Mineral",
+        "effect_summary": "Bone Health",
+        "health_effect": "Supports bone formation and helps the body process protein and cholesterol."
+    },
+    {
+        "id": 260,
+        "ingredient": "Chromium",
+        "category": "Mineral",
+        "effect_summary": "Blood Sugar Control",
+        "health_effect": "May improve insulin sensitivity and enhance protein, carbohydrate, and lipid metabolism."
+    },
+    {
+        "id": 261,
+        "ingredient": "Molybdenum",
+        "category": "Mineral",
+        "effect_summary": "Enzyme Support",
+        "health_effect": "Essential for enzymes that break down certain amino acids and harmful substances in the body."
+    },
+    {
+        "id": 262,
+        "ingredient": "Vitamin K2 (MK-7)",
+        "category": "Vitamin",
+        "effect_summary": "Bone / Heart Health",
+        "health_effect": "Directs calcium to the bones and teeth and away from the arteries. Critical for heart health."
+    },
+    {
+        "id": 263,
+        "ingredient": "Vitamin A (Palmitate)",
+        "category": "Vitamin",
+        "effect_summary": "Vision / Immunity",
+        "health_effect": "Essential for eye health and skin. Synthetic form used for fortification."
+    },
+    {
+        "id": 264,
+        "ingredient": "Vitamin B5 (Pantothenic Acid)",
+        "category": "Vitamin",
+        "effect_summary": "Energy production",
+        "health_effect": "Necessary for making blood cells and converting food into energy."
+    },
+    {
+        "id": 265,
+        "ingredient": "Vitamin B6 (Pyridoxine)",
+        "category": "Vitamin",
+        "effect_summary": "Brain health",
+        "health_effect": "Involved in neurotransmitter synthesis and immune function."
+    },
+    {
+        "id": 266,
+        "ingredient": "Biotin (Vitamin B7)",
+        "category": "Vitamin",
+        "effect_summary": "Hair / Skin / Nails",
+        "health_effect": "Essential for the metabolism of fats and carbohydrates. Supports keratin production."
+    },
+    {
+        "id": 267,
+        "ingredient": "Lutein",
+        "category": "Antioxidant",
+        "effect_summary": "Eye Health",
+        "health_effect": "Protects the eyes from blue light and oxidative damage."
+    },
+    {
+        "id": 268,
+        "ingredient": "Zeaxanthin",
+        "category": "Antioxidant",
+        "effect_summary": "Eye Health",
+        "health_effect": "Works with lutein to protect the macula of the eye."
+    },
+    {
+        "id": 269,
+        "ingredient": "Lycopene",
+        "category": "Antioxidant",
+        "effect_summary": "Heart / Cancer Risk",
+        "health_effect": "Found in tomatoes. Supports prostate health and protects skin from sun damage."
+    },
+    {
+        "id": 270,
+        "ingredient": "Beta-Glucan",
+        "category": "Fiber",
+        "effect_summary": "Heart Health",
+        "health_effect": "A soluble fiber found in oats and mushrooms. Lowers cholesterol and boosts immunity."
+    },
+    {
+        "id": 271,
+        "ingredient": "Artichoke Extract",
+        "category": "Vegetable",
+        "effect_summary": "Liver Health",
+        "health_effect": "Supports bile production and liver detoxification."
+    },
+    {
+        "id": 272,
+        "ingredient": "Milk Thistle Extract",
+        "category": "Herb",
+        "effect_summary": "Liver Protection",
+        "health_effect": "Contains silymarin. Used to protect the liver from toxins and inflammation."
+    },
+    {
+        "id": 273,
+        "ingredient": "Ashwagandha",
+        "category": "Herb",
+        "effect_summary": "Adaptogen / Stress",
+        "health_effect": "Helps the body manage stress. Improves sleep and may boost testosterone."
+    },
+    {
+        "id": 274,
+        "ingredient": "Ginseng (Panax)",
+        "category": "Herb",
+        "effect_summary": "Energy / Immunity",
+        "health_effect": "Boosts energy levels and supports immune function. May improve cognitive performance."
+    },
+    {
+        "id": 275,
+        "ingredient": "Holy Basil (Tulsi)",
+        "category": "Herb",
+        "effect_summary": "Stress / Anxiety",
+        "health_effect": "Supports a healthy response to stress. Anti-inflammatory and antioxidant."
+    },
+    {
+        "id": 276,
+        "ingredient": "Maca Root",
+        "category": "Root",
+        "effect_summary": "Energy / Libido",
+        "health_effect": "An adaptogen from Peru. Supports energy, focus, and hormonal balance."
+    },
+    {
+        "id": 277,
+        "ingredient": "Dandelion Root",
+        "category": "Herb",
+        "effect_summary": "Liver / Digestion",
+        "health_effect": "Acts as a gentle diuretic and supports liver health."
+    },
+    {
+        "id": 278,
+        "ingredient": "Elderberry",
+        "category": "Fruit",
+        "effect_summary": "Immune Support / Flu",
+        "health_effect": "Rich in antioxidants. Often used to shorten the duration of the common cold and flu."
+    },
+    {
+        "id": 279,
+        "ingredient": "Echinacea",
+        "category": "Herb",
+        "effect_summary": "Immune System",
+        "health_effect": "Popular herbal remedy for fighting infections and supporting the immune system."
+    },
+    {
+        "id": 280,
+        "ingredient": "Valerian Root",
+        "category": "Herb",
+        "effect_summary": "Sleep / Calm",
+        "health_effect": "Used for centuries as a natural sleep aid and anti-anxiety treatment."
+    },
+    {
+        "id": 281,
+        "ingredient": "Passionflower",
+        "category": "Herb",
+        "effect_summary": "Anxiety / Sleep",
+        "health_effect": "Helps relieve anxiety and insomnia by increasing GABA levels in the brain."
+    },
+    {
+        "id": 282,
+        "ingredient": "Rhodiola Rosea",
+        "category": "Herb",
+        "effect_summary": "Fatigue / Stress",
+        "health_effect": "An adaptogen that helps the body adapt to physical and mental stress. Reduces fatigue."
+    },
+    {
+        "id": 283,
+        "ingredient": "Turmeric Extract (95% Curcuminoids)",
+        "category": "Spice Extract",
+        "effect_summary": "Potent Anti-inflammatory",
+        "health_effect": "Concentrated form of curcumin for maximum anti-inflammatory benefits."
+    },
+    {
+        "id": 284,
+        "ingredient": "Quercetin",
+        "category": "Antioxidant",
+        "effect_summary": "Allergy Support",
+        "health_effect": "A flavonoid found in onions and apples. Natural antihistamine and anti-inflammatory."
+    },
+    {
+        "id": 285,
+        "ingredient": "Resveratrol",
+        "category": "Antioxidant",
+        "effect_summary": "Longevity / Heart",
+        "health_effect": "Found in red grapes and wine. Activates 'longevity genes' and protects the heart."
+    },
+    {
+        "id": 286,
+        "ingredient": "Coenzyme Q10 (CoQ10)",
+        "category": "Antioxidant",
+        "effect_summary": "Energy / Heart",
+        "health_effect": "Essential for energy production in cells. Protects the heart and brain."
+    },
+    {
+        "id": 287,
+        "ingredient": "Alpha Lipoic Acid (ALA)",
+        "category": "Antioxidant",
+        "effect_summary": "Blood Sugar / Nerves",
+        "health_effect": "Universal antioxidant that helps lower blood sugar and improve nerve function."
+    },
+    {
+        "id": 288,
+        "ingredient": "Glutahtione",
+        "category": "Antioxidant",
+        "effect_summary": "Master Antioxidant",
+        "health_effect": "The most important antioxidant produced by the body. Supports detoxification and immune health."
+    },
+    {
+        "id": 289,
+        "ingredient": "N-Acetyl Cysteine (NAC)",
+        "category": "Amino Acid",
+        "effect_summary": "Lung / Liver health",
+        "health_effect": "Precursor to glutathione. Supports respiratory health and liver detoxification."
+    },
+    {
+        "id": 290,
+        "ingredient": "Quillaia Extract",
+        "category": "Emulsifier / Foaming Agent",
+        "effect_summary": "Natural Additive",
+        "health_effect": "Derived from the soapbark tree. Used in root beer and sodas for foam. Generally safe."
+    },
+    {
+        "id": 291,
+        "ingredient": "Yucca Extract",
+        "category": "Flavoring / Foaming Agent",
+        "effect_summary": "Anti-inflammatory",
+        "health_effect": "Used for foam and flavor. Contains saponins which may have anti-inflammatory properties."
+    },
+    {
+        "id": 292,
+        "ingredient": "Stearyl Citrate",
+        "category": "Emulsifier",
+        "effect_summary": "Mixing Agent",
+        "health_effect": "Used to prevent fat bloom in chocolate. Generally recognized as safe."
+    },
+    {
+        "id": 293,
+        "ingredient": "Sodium Lauryl Sulfate",
+        "category": "Emulsifier / Foaming Agent",
+        "effect_summary": "Controversial Additive",
+        "health_effect": "Used in some liquid eggs or marshmallows to improve texture. A common detergent also used in soap; some avoid it for potential irritation."
+    },
+    {
+        "id": 294,
+        "ingredient": "Sorbitan Tristearate",
+        "category": "Emulsifier",
+        "effect_summary": "Stability",
+        "health_effect": "Used in chocolate and baked goods to prevent fat separation. Generally safe."
+    },
+    {
+        "id": 295,
+        "ingredient": "Polysorbate 80",
+        "category": "Emulsifier",
+        "effect_summary": "Texture / Volume",
+        "health_effect": "Used in ice cream and baked goods. Some animal studies link high amounts to gut microbiome changes."
+    },
+    {
+        "id": 296,
+        "ingredient": "Propylene Glycol Esters of Fatty Acids",
+        "category": "Emulsifier",
+        "effect_summary": "Baking Aid",
+        "health_effect": "Helps keep cakes light and fluffy. Generally safe."
+    },
+    {
+        "id": 297,
+        "ingredient": "Polyglycerol Polyricinoleate (PGPR)",
+        "category": "Emulsifier",
+        "effect_summary": "Flow Agent",
+        "health_effect": "Commonly used in cheap chocolate to reduce cocoa butter content. Generally safe but highly processed."
+    },
+    {
+        "id": 298,
+        "ingredient": "Calcium Peroxide",
+        "category": "Processing Aid / Bleaching Agent",
+        "effect_summary": "Dough Conditioner",
+        "health_effect": "Used to strengthen bread dough. Generally safe as it breaks down quickly."
+    },
+    {
+        "id": 299,
+        "ingredient": "Azodicarbonamide (ADA)",
+        "category": "Processing Aid / Bleaching Agent",
+        "effect_summary": "Yoga Mat Chemical / Controversy",
+        "health_effect": "Used to bleach flour and strengthen dough. Banned in many countries as it's also used in plastics. Potential respiratory irritant."
+    },
+    {
+        "id": 300,
+        "ingredient": "Benzoyl Peroxide",
+        "category": "Bleaching Agent",
+        "effect_summary": "Flour Whitener",
+        "health_effect": "Used to whiten flour. Also a common acne treatment. Generally safe in food amounts."
+    },
+    {
+        "id": 301,
+        "ingredient": "Brominated Vegetable Oil (BVO)",
+        "category": "Emulsifier / Clouding Agent",
+        "effect_summary": "Controversial Cloudifier",
+        "health_effect": "Used to keep citrus flavors mixed in sodas. Banned in many countries due to bromine accumulation in the body and potential health risks."
+    },
+    {
+        "id": 302,
+        "ingredient": "Sodium Hexametaphosphate",
+        "category": "Sequestrant / Texturizer",
+        "effect_summary": "Mineral Binder",
+        "health_effect": "Used to prevent scale in water and maintain texture in foods. High intake of phosphates is linked to kidney issues."
+    },
+    {
+        "id": 303,
+        "ingredient": "Sodium Tripolyphosphate",
+        "category": "Preservative / Texturizer",
+        "effect_summary": "Moisture Retention",
+        "health_effect": "Used in seafood and meat to keep them moist. Excessive phosphate intake can be harmful to kidneys and heart."
+    },
+    {
+        "id": 304,
+        "ingredient": "Tetrasodium Pyrophosphate",
+        "category": "Emulsifier / Thickener",
+        "effect_summary": "Texture Stabilizer",
+        "health_effect": "Used in instant puddings and cheese. Adds significant phosphorus to the diet."
+    },
+    {
+        "id": 305,
+        "ingredient": "Calcium Disodium EDTA",
+        "category": "Preservative",
+        "effect_summary": "Metal Sequestrant",
+        "health_effect": "Prevents metallic tastes and discoloration. Generally safe in small amounts."
+    },
+    {
+        "id": 306,
+        "ingredient": "Dioctyl Sodium Sulfosuccinate",
+        "category": "Processing Aid",
+        "effect_summary": "Wetting Agent",
+        "health_effect": "Used in some drinks or candies. Also a stool softener. Generally safe in tiny food amounts."
+    },
+    {
+        "id": 307,
+        "ingredient": "Mineral Oil",
+        "category": "Processing Aid",
+        "effect_summary": "Lubricant / Anti-dust",
+        "health_effect": "Used to coat candy or prevent dust in grains. Non-absorbable by the body. Some concern over contamination."
+    },
+    {
+        "id": 308,
+        "ingredient": "Paraffin Wax",
+        "category": "Glaze",
+        "effect_summary": "Shiny Coating",
+        "health_effect": "Used to coat fruits or candies. Passes through the digestive system unchanged. Generally safe but non-nutritive."
+    },
+    {
+        "id": 309,
+        "ingredient": "Spermaceti",
+        "category": "Glaze",
+        "effect_summary": "Whale Oil Derivative (Obsolete)",
+        "health_effect": "Historically used in confections. Now replaced by vegetable waxes due to animal protection laws."
+    },
+    {
+        "id": 310,
+        "ingredient": "Olestra (Olean)",
+        "category": "Fat Substitute",
+        "effect_summary": "Zero Calorie Fat",
+        "health_effect": "A synthetic fat that provides no calories but can cause 'anal leakage' and nutrient depletion. Rarely used today."
+    },
+    {
+        "id": 311,
+        "ingredient": "Modified Cellulose",
+        "category": "Thickener / Filler",
+        "effect_summary": "Plant-based Bulk",
+        "health_effect": "Made from wood pulp or cotton. Used to increase fiber content or reduce fat. Generally safe but non-nutritive."
+    },
+    {
+        "id": 312,
+        "ingredient": "Microcrystalline Cellulose",
+        "category": "Anti-caking Agent",
+        "effect_summary": "Fiber Filler",
+        "health_effect": "A refined wood pulp product. Used to prevent clumping and add bulk. Generally safe."
+    },
+    {
+        "id": 313,
+        "ingredient": "Carmine (Class II)",
+        "category": "Natural Color",
+        "effect_summary": "Red Dye",
+        "health_effect": "Derived from insects. Must be specifically labeled for those with allergies. Known to cause severe anaphylaxis in rare cases."
+    },
+    {
+        "id": 314,
+        "ingredient": "Ferrous Gluconate",
+        "category": "Colorant / Mineral",
+        "effect_summary": "Black Color / Iron",
+        "health_effect": "Used to blacken olives. Also an iron supplement. Generally safe."
+    },
+    {
+        "id": 315,
+        "ingredient": "Canthaxanthin",
+        "category": "Colorant",
+        "effect_summary": "Orange-Red",
+        "health_effect": "A carotenoid used to color salmon and egg yolks. High amounts can cause retinal damage."
+    },
+    {
+        "id": 316,
+        "ingredient": "Erythrosine (Red 3)",
+        "category": "Artificial Color",
+        "effect_summary": "Fluorescent Red",
+        "health_effect": "Used in maraschino cherries. FDA has banned it in cosmetics due to thyroid cancer risk in rats, but it's still legal in food."
+    },
+    {
+        "id": 317,
+        "ingredient": "Indigo Carmine (Blue 2)",
+        "category": "Artificial Color",
+        "effect_summary": "Deep Blue",
+        "health_effect": "Used in candies and snacks. Potential links to hyperactivity in children."
+    },
+    {
+        "id": 318,
+        "ingredient": "Fast Green FCF (Green 3)",
+        "category": "Artificial Color",
+        "effect_summary": "Teal-Green",
+        "health_effect": "A synthetic dye. Banned in the EU due to concerns about tumorigenicity in animal studies."
+    },
+    {
+        "id": 319,
+        "ingredient": "Potassium Iodate",
+        "category": "Leavening Agent / Mineral",
+        "effect_summary": "Dough Conditioner / Iodine",
+        "health_effect": "Used to strengthen dough. Also provides iodine. Generally safe."
+    },
+    {
+        "id": 320,
+        "ingredient": "Ammonium Chloride",
+        "category": "Acidity Regulator",
+        "effect_summary": "Salty Flavor",
+        "health_effect": "Used in salty licorice (salmiak). Generally safe but has a strong, pungent taste."
+    },
+    {
+        "id": 321,
+        "ingredient": "Adipic Acid",
+        "category": "Acidity Regulator",
+        "effect_summary": "Tartness",
+        "health_effect": "Used in gelatin desserts to provide a sharp taste. Generally safe."
+    },
+    {
+        "id": 322,
+        "ingredient": "Fumaric Acid",
+        "category": "Acidity Regulator",
+        "effect_summary": "Acidifier",
+        "health_effect": "Used in tortillas and sour breads. Generally safe and helps prevent mold."
+    },
+    {
+        "id": 323,
+        "ingredient": "Malic Acid",
+        "category": "Acidity Regulator",
+        "effect_summary": "Sourness / Tartness",
+        "health_effect": "Naturally found in green apples. Provides a lingering sour taste. Generally very safe."
+    },
+    {
+        "id": 324,
+        "ingredient": "Glucono Delta-Lactone (GDL)",
+        "category": "Acidity Regulator / Sequestrant",
+        "effect_summary": "Coagulant / Acidifier",
+        "health_effect": "Used to curdle tofu and in sausages. Generally recognize as safe."
+    },
+    {
+        "id": 325,
+        "ingredient": "Heptylparaben",
+        "category": "Preservative",
+        "effect_summary": "Antifungal",
+        "health_effect": "Used in beer and non-alcoholic drinks. A paraben; some concern regarding endocrine disruption."
+    },
+    {
+        "id": 326,
+        "ingredient": "Stannous Chloride",
+        "category": "Antioxidant / Color Protector",
+        "effect_summary": "Tin Mineral",
+        "health_effect": "Used in canned asparagus and beverages to maintain color. Generally safe at low levels."
+    },
+    {
+        "id": 327,
+        "ingredient": "Calcium Chloride",
+        "category": "Firming Agent",
+        "effect_summary": "Crispness",
+        "health_effect": "Used in pickles and canned vegetables to keep them firm. Also a source of calcium."
+    },
+    {
+        "id": 328,
+        "ingredient": "Magnesium Chloride",
+        "category": "Firming Agent / Mineral",
+        "effect_summary": "Tofu Coagulant",
+        "health_effect": "Used to curdle soy milk into tofu. A good source of magnesium."
+    },
+    {
+        "id": 329,
+        "ingredient": "Ethyl Lauroyl Arginate",
+        "category": "Preservative",
+        "effect_summary": "Antimicrobial",
+        "health_effect": "A relatively new preservative derived from natural amino acids. Generally safe."
+    },
+    {
+        "id": 330,
+        "ingredient": "Natamycin",
+        "category": "Preservative",
+        "effect_summary": "Antifungal",
+        "health_effect": "A natural preservative produced by bacteria. Used on cheese and sausages to prevent mold. Generally safe."
+    },
+    {
+        "id": 331,
+        "ingredient": "Nisin",
+        "category": "Preservative",
+        "effect_summary": "Antibacterial",
+        "health_effect": "A natural preservative produced by fermentation. Effective against a wide range of bacteria. Generally safe."
+    },
+    {
+        "id": 332,
+        "ingredient": "Propylene Glycol Alginate",
+        "category": "Thickener / Stabilizer",
+        "effect_summary": "Kelp derivative",
+        "health_effect": "Used in beer foam and salad dressings. Generally safe."
+    },
+    {
+        "id": 333,
+        "ingredient": "Invertase",
+        "category": "Enzyme",
+        "effect_summary": "Soft Center",
+        "health_effect": "Used in chocolate-covered cherries to liquefy the sugary center. Generally safe."
+    },
+    {
+        "id": 334,
+        "ingredient": "Amylase",
+        "category": "Enzyme",
+        "effect_summary": "Starch Breakdown",
+        "health_effect": "Breaks down starches into sugars. Naturally occurs in saliva; used in baking. Generally safe."
+    },
+    {
+        "id": 335,
+        "ingredient": "Protease",
+        "category": "Enzyme",
+        "effect_summary": "Protein Breakdown",
+        "health_effect": "Helps soften dough by breaking down gluten. Generally safe."
+    },
+    {
+        "id": 336,
+        "ingredient": "Lipase",
+        "category": "Enzyme",
+        "effect_summary": "Fat Breakdown",
+        "health_effect": "Used in cheesemaking to develop flavor. Generally safe."
+    },
+    {
+        "id": 337,
+        "ingredient": "Lactase",
+        "category": "Enzyme",
+        "effect_summary": "Lactose Breakdown",
+        "health_effect": "Added to milk to make it 'lactose-free'. Essential for those with lactose intolerance."
+    },
+    {
+        "id": 338,
+        "ingredient": "Cellulase",
+        "category": "Enzyme",
+        "effect_summary": "Fiber Breakdown",
+        "health_effect": "Used to clarify juices and process coffee. Generally safe."
+    },
+    {
+        "id": 339,
+        "ingredient": "Glucose Oxidase",
+        "category": "Enzyme",
+        "effect_summary": "Preservation / Browning",
+        "health_effect": "Used to remove oxygen and prevent browning in dried eggs and wines. Generally safe."
+    }
+]

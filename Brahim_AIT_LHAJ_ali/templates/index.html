@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="FoodSafetyScanner — Upload a food label photo and get an instant AI-powered health analysis with score, verdict, and detailed report powered by RAG." />
+  <title>FoodSafetyScanner — AI Food Label Analysis</title>
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥦</text></svg>" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- ───── Header ───── -->
+    <header class="header">
+      <div class="header__icon" aria-hidden="true">🥦</div>
+      <h1 class="header__title">FoodSafetyScanner</h1>
+      <p class="header__subtitle">Upload a food label · Get an instant AI health report</p>
+    </header>
+
+    <!-- ───── Upload Card ───── -->
+    <section class="upload-card" aria-label="Upload food label image">
+      <div class="dropzone" id="dropzone">
+        <input type="file" id="fileInput" accept="image/png,image/jpeg,image/webp" />
+        <span class="dropzone__icon" aria-hidden="true">📸</span>
+        <p class="dropzone__text">
+          <strong>Drag & drop</strong> your food label photo here<br>
+          or <strong>click to browse</strong>
+        </p>
+        <span class="dropzone__hint">PNG, JPG, or WebP · Max 10 MB</span>
+      </div>
+
+      <!-- File preview -->
+      <div class="preview-area" id="previewArea">
+        <img class="preview-area__img" id="previewImg" alt="Preview" />
+        <div class="preview-area__info">
+          <div class="preview-area__name" id="previewName"></div>
+          <div class="preview-area__size" id="previewSize"></div>
+        </div>
+        <button class="preview-area__remove" id="removeBtn" title="Remove file"
+          aria-label="Remove selected file">&times;</button>
+      </div>
+
+      <!-- Analyze CTA -->
+      <button class="btn-analyze" id="analyzeBtn" type="button">
+        <span id="analyzeBtnText">Analyze Label</span>
+        <span aria-hidden="true">→</span>
+      </button>
+    </section>
+
+    <!-- ───── Loader ───── -->
+    <div class="loader" id="loader" aria-live="polite">
+      <div class="loader__spinner"></div>
+      <span class="loader__text" id="loaderText">Extracting ingredients from label…</span>
+    </div>
+
+    <!-- ───── Error ───── -->
+    <div class="error-card" id="errorCard" role="alert"></div>
+
+    <!-- ───── Result ───── -->
+    <section class="result" id="resultSection" aria-label="Analysis results">
+
+      <!-- RAG Stats Badge -->
+      <div class="rag-stats" id="ragStats">
+        <div class="rag-stats__item">
+          <span class="rag-stats__number" id="ragTotal">0</span>
+          <span class="rag-stats__label">Ingredients Found</span>
+        </div>
+        <div class="rag-stats__divider"></div>
+        <div class="rag-stats__item">
+          <span class="rag-stats__number rag-stats__number--matched" id="ragMatched">0</span>
+          <span class="rag-stats__label">In Database</span>
+        </div>
+        <div class="rag-stats__divider"></div>
+        <div class="rag-stats__item">
+          <span class="rag-stats__number rag-stats__number--unmatched" id="ragUnmatched">0</span>
+          <span class="rag-stats__label">Unknown</span>
+        </div>
+      </div>
+
+      <!-- Score gauge -->
+      <div class="score-section">
+        <div class="gauge">
+          <svg class="gauge__svg" viewBox="0 0 140 140">
+            <circle class="gauge__bg" cx="70" cy="70" r="65" />
+            <circle class="gauge__fill" id="gaugeFill" cx="70" cy="70" r="65" />
+          </svg>
+          <div class="gauge__score">
+            <span class="gauge__number" id="gaugeNumber">0</span>
+            <span class="gauge__label">/ 10</span>
+          </div>
+        </div>
+        <span class="verdict-badge" id="verdictBadge"></span>
+      </div>
+
+      <!-- Report card -->
+      <div class="report-card">
+        <h2 class="report-card__heading">
+          <span aria-hidden="true">📋</span> Detailed Report
+        </h2>
+        <p class="report-card__text" id="reportText"></p>
+      </div>
+
+      <!-- Ingredients breakdown -->
+      <div class="ingredients-card" id="ingredientsCard">
+        <h2 class="ingredients-card__heading">
+          <span aria-hidden="true">🧪</span> Ingredient Breakdown
+        </h2>
+        <div class="ingredients-list" id="ingredientsList"></div>
+      </div>
+
+      <!-- Scan again -->
+      <button class="btn-scan-again" id="scanAgainBtn" type="button">
+        <span aria-hidden="true"></span> Scan Another Label
+      </button>
+    </section>
+
+    <!-- ───── Footer ───── -->
+    <footer class="footer">
+      Powered by <a target="_blank" rel="noopener">Brahim</a> · Built with 💚
+    </footer>
+
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+
+</html>
