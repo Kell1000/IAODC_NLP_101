@@ -80,3 +80,36 @@ Le système inclut également une interface interactive permettant la correction
 ---
 
 ## Structure du projet
+project/
+│
+├── Projet_ibtissam.ipynb # Notebook principal
+├── data/ # Jeux de données (PDF et TXT)
+├── models/ # Modèles sauvegardés
+└── README.md # Documentation du projet
+
+---
+
+## Installation
+
+### 1. Cloner le dépôt
+```bash
+git clone <url-du-repository>
+cd <dossier-du-projet>
+
+---
+
+## Installation
+
+### 1. Cloner le dépôt
+```bash
+git clone <url-du-repository>
+cd <dossier-du-projet>
+
+2. Installer les dépendances
+
+pip install PyPDF2 faiss-cpu sentence-transformers transformers torch gradio
+
+
+
+
+
