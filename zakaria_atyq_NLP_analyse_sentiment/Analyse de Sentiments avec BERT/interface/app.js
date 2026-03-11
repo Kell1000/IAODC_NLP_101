@@ -400,13 +400,33 @@ window.analyzeReview = async function(productId) {
   if (list) {
     const div = document.createElement('div');
     div.className = `review-item ${isPos ? 'pos-r' : 'neg-r'}`;
-    div.innerHTML = `
-      <div class="ri-top">
-        <span class="ri-user">👤 ${username}</span>
-        <span class="ri-badge ${isPos ? 'rib-pos' : 'rib-neg'}">${isPos ? '😊 Positive' : '😞 Negative'}</span>
-      </div>
-      <div class="ri-text">${text}</div>
-      <div class="ri-conf">🤖 ${pct}% confidence</div>`;
+
+    const topDiv = document.createElement('div');
+    topDiv.className = 'ri-top';
+
+    const userSpan = document.createElement('span');
+    userSpan.className = 'ri-user';
+    userSpan.textContent = '👤 ' + username;
+
+    const badgeSpan = document.createElement('span');
+    badgeSpan.className = `ri-badge ${isPos ? 'rib-pos' : 'rib-neg'}`;
+    badgeSpan.textContent = isPos ? '😊 Positive' : '😞 Negative';
+
+    topDiv.appendChild(userSpan);
+    topDiv.appendChild(badgeSpan);
+
+    const textDiv = document.createElement('div');
+    textDiv.className = 'ri-text';
+    textDiv.textContent = text;
+
+    const confDiv = document.createElement('div');
+    confDiv.className = 'ri-conf';
+    confDiv.textContent = `🤖 ${pct}% confidence`;
+
+    div.appendChild(topDiv);
+    div.appendChild(textDiv);
+    div.appendChild(confDiv);
+
     list.insertBefore(div, list.firstChild);
   }
 
