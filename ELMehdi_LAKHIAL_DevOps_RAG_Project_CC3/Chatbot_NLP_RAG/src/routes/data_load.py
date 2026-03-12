@@ -160,20 +160,20 @@ async def list_files(
     query = {}
 
     if caller_role == "admin":
-        # admin yshof ga3 les fichiers
+        
         if owner_only:
-            # filter b path_file li fih role=admin
+            
             query["path_file"] = {"$regex": f"/{caller_role}/", "$options": "i"}
 
     elif caller_role == "manager":
-        # manager yshof f9at les fichiers li upload b id_load=manager
+        
         query["path_file"] = {"$regex": "/manager/", "$options": "i"}
 
     elif caller_role == "user":
-        # user yshof f9at les fichiers li upload b id_load=user
+        
         query["path_file"] = {"$regex": "/user/", "$options": "i"}
 
-    # filter b type
+    
     if type_filter:
         type_map = {
             "pdf":   "application/pdf",
@@ -197,16 +197,15 @@ async def list_files(
 
     items = []
     async for doc in cursor:
-        # extract id_load from path_file
-        # path format: /app/src/assets/upload_file/{id_load}/{filename}
+        
         path  = doc.get("path_file", "")
         parts = path.split("/")
-        # id_load is the folder just before the filename
+        
         id_load = parts[-2] if len(parts) >= 2 else "unknown"
 
-        # check if processed — look in chunks_rag collection
+        
         chunk_count = await db["chunks_rag"].count_documents({
-            "project_id": doc.get("project_id")
+            "chunk_project_id": doc.get("project_id")
         })
 
         items.append({
