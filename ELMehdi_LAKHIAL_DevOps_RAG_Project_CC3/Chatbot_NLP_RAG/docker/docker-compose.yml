@@ -26,6 +26,17 @@ services:
       - motor-network
     restart: always
 
+  mongo:
+    image: mongo:4.4
+    container_name: mongo_container
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongodb:/data/db
+    networks:
+      - motor-network
+    restart: always
+
 networks:
   motor-network:
     driver: bridge

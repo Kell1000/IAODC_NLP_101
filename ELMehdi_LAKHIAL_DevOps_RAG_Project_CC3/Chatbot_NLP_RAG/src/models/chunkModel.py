@@ -76,11 +76,25 @@ class chunkModel(BaseDataModel):
                 project_id: str,
                 role: Optional[str] = None,
                 batch_size: int = 200 ) -> int:
-
-                query = {"chunk_project_id": project_id}
+                query = {"chunk_project_id": str(project_id)}
+    
                 if role:
-                       query["metadata.allowed_roles"] = role  
+                        query["metadata.allowed_roles"] = str(role)
 
+                print(f"DEBUG: Critical Query Check -> {query}")
+               
+                total_for_project = await self.collection.count_documents({"chunk_project_id": str(project_id)})
+                print(f"DEBUG: Total chunks for project {project_id} (regardless of role): {total_for_project}")
+
+               
+                sample_doc = await self.collection.find_one({"chunk_project_id": str(project_id)})
+                if sample_doc:
+                        print(f"DEBUG: Sample Doc Keys found: {list(sample_doc.keys())}")
+                        print(f"DEBUG: Sample allowed_roles value: {sample_doc.get('allowed_roles')}")
+                else:
+                        print(f"DEBUG: No document found even with project_id string!")
+
+  
                 total = 0
                 cursor = self.collection.find(query)
 

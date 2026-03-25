@@ -81,16 +81,6 @@ class RAGController:
         
         roles_list = allowed_roles(role)
 
-        chunk_model = await chunkModel.instance(db_client=self.db_client)
-        
-        for r in roles_list:
-            await chunk_model.upsert_project_chunks_to_chroma(
-                vector_store=self.vector_store,
-                project_id=str(project_id),
-                role=r  
-            )
-
-
         roles_list = allowed_roles(role)
 
         if len(roles_list) == 1:

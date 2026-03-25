@@ -112,7 +112,7 @@ async def add_user_message(
     project = await project_model.get_project_by_id(str(role_u))
     # 2 call RAG
     
-    rag_ask = RAGController(db_client=db)
+    rag_ask = RAGController(db_client=request.app.mongodb_client)
     answer = await rag_ask.ask_question(
         query=payload.content,
         project_id=project.id,
