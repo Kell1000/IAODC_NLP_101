@@ -1,4 +1,5 @@
 from fastapi import APIRouter, FastAPI , Depends , UploadFile , status , Request
+from countroller.RetrievalController import RAGController
 from helpers.config import settings , get_settings
 from fastapi.responses import JSONResponse
 from database.db_schema.files import FileAsset
@@ -60,7 +61,8 @@ async def read_data_load(request: Request, id_load: roles , file: UploadFile, ap
                         path_file=file_location,
                         type_file=file.content_type,
                         project_id=str(project.id),
-                        size_file=os.path.getsize(file_location)
+                        size_file=os.path.getsize(file_location),
+                        status_chunk=False
                 )
                 file_metadata = metadata.model_dump(exclude_unset=True , by_alias=True)
                 
@@ -141,6 +143,24 @@ async def validate_data_load(request: Request ,id_load: roles , payload: DataVal
                 ready = await db["files_metadata"].update_one({"name_file": file_id}, {"$set": {"status_chunk": True}} )
                                                               
         no_chunks = await chun_model.create_chunks_batch(chunks=record)
+
+        rag_controller = RAGController(db_client=request.app.mongodb_client)
+
+        def get_allowed_roles(role: str) -> list[str]:
+            if role == "admin":
+                return ["admin", "manager", "user"]
+            if role == "manager":
+                return ["manager", "user"]
+            return ["user"]
+
+        roles_list = get_allowed_roles(id_load.value)
+
+        for r in roles_list:
+            await chun_model.upsert_project_chunks_to_chroma(
+                vector_store=rag_controller.vector_store,
+                project_id=str(project.id),
+                role=r  
+            )
 
         return JSONResponse(content={"status": f"Chunks created: \n {no_chunks}  \n {Const.procceing_file_success}"}, status_code=status.HTTP_200_OK)
 
