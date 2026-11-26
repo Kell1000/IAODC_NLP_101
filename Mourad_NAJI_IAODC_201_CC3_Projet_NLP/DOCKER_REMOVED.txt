@@ -1,1 +1,0 @@
-# Docker files removed - project now runs directly with Python/uvicorn
