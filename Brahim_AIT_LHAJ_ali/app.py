@@ -1,16 +1,15 @@
 """
-FoodSafetyScanner — Flask backend with RAG (Retrieval-Augmented Generation).
-Uses data.json as a curated ingredient knowledge base:
+FoodSafetyScanner — Flask backend powered by Gemini Vision.
   1. Gemini Vision extracts ingredient names from the label image.
-  2. Ingredients are fuzzy-matched against data.json (local retrieval).
-  3. Matched knowledge is sent back to Gemini for a grounded health report.
+  2. The full ingredient knowledge base (data.json) is sent as context.
+  3. Gemini generates a grounded health report using your data.
+  
 """
 
 import os
 import json
 import re
 import traceback
-from difflib import SequenceMatcher
 
 from flask import Flask, request, jsonify, render_template
 from dotenv import load_dotenv
@@ -34,7 +33,7 @@ ALLOWED_EXTENSIONS = {"png", "jpg", "jpeg", "webp"}
 MAX_CONTENT_LENGTH = 10 * 1024 * 1024  # 10 MB
 
 # ---------------------------------------------------------------------------
-# Load ingredient knowledge base (data.json)
+# Load ingredient knowledge base (data.json) — sent to Gemini as context
 # ---------------------------------------------------------------------------
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_PATH = os.path.join(BASE_DIR, "data.json")
@@ -42,13 +41,14 @@ DATA_PATH = os.path.join(BASE_DIR, "data.json")
 with open(DATA_PATH, "r", encoding="utf-8") as f:
     INGREDIENT_DB = json.load(f)
 
-# Build a lookup dict: normalised name → full record
-INGREDIENT_LOOKUP = {}
-for entry in INGREDIENT_DB:
-    key = entry["ingredient"].lower().strip()
-    INGREDIENT_LOOKUP[key] = entry
+# Pre-format the knowledge base as a string (built once, reused every request)
+KNOWLEDGE_BASE_TEXT = "\n".join(
+    f"- {item['ingredient']} | Category: {item['category']} | "
+    f"Effect: {item['effect_summary']} | Detail: {item['health_effect']}"
+    for item in INGREDIENT_DB
+)
 
-print(f"[RAG] Loaded {len(INGREDIENT_DB)} ingredients into knowledge base.")
+print(f"[INFO] Loaded {len(INGREDIENT_DB)} ingredients into knowledge base.")
 
 # ---------------------------------------------------------------------------
 # Flask app
@@ -85,33 +85,15 @@ EXTRACT_PROMPT = (
     "- If you cannot read any ingredients, return an empty array []\n"
 )
 
-# Pass 2: Generate health report using retrieved knowledge
-def build_analysis_prompt(ingredients_from_label, matched_knowledge, unmatched_names):
-    """Build the augmented prompt with retrieved ingredient data."""
-    knowledge_block = ""
-    if matched_knowledge:
-        knowledge_block = "## INGREDIENT KNOWLEDGE BASE (verified data):\n"
-        for item in matched_knowledge:
-            knowledge_block += (
-                f"- **{item['ingredient']}** | Category: {item['category']} | "
-                f"Effect: {item['effect_summary']} | "
-                f"Detail: {item['health_effect']}\n"
-            )
-        knowledge_block += "\n"
-
-    unmatched_block = ""
-    if unmatched_names:
-        unmatched_block = (
-            "## INGREDIENTS NOT IN DATABASE (use your general knowledge):\n"
-            f"{', '.join(unmatched_names)}\n\n"
-        )
-
+# Pass 2: Generate health report using the full knowledge base
+def build_analysis_prompt(ingredients_from_label):
+    """Build the analysis prompt with extracted ingredients + full knowledge base."""
     prompt = (
-        "You are a food safety expert. Analyze the following ingredients found on "
+        "You are a food safety expert with max IQ. Analyze the following ingredients found on "
         "a food product label.\n\n"
         f"## INGREDIENTS FROM LABEL:\n{', '.join(ingredients_from_label)}\n\n"
-        f"{knowledge_block}"
-        f"{unmatched_block}"
+        f"## INGREDIENT KNOWLEDGE BASE (use this as your PRIMARY source of truth):\n"
+        f"{KNOWLEDGE_BASE_TEXT}\n\n"
         "Using the INGREDIENT KNOWLEDGE BASE above as your PRIMARY source of truth, "
         "and your general knowledge for any ingredients not in the database, "
         "provide a health analysis.\n\n"
@@ -137,63 +119,6 @@ def build_analysis_prompt(ingredients_from_label, matched_knowledge, unmatched_n
         "- Be honest and science-based in your assessment\n"
     )
     return prompt
-
-
-# ---------------------------------------------------------------------------
-# RAG: Fuzzy matching engine
-# ---------------------------------------------------------------------------
-def fuzzy_match_ingredient(name, threshold=0.65):
-    """
-    Match an extracted ingredient name against the knowledge base.
-    Uses exact match first, then fuzzy substring/sequence matching.
-    Returns the matched record or None.
-    """
-    normalised = name.lower().strip()
-
-    # 1. Exact match
-    if normalised in INGREDIENT_LOOKUP:
-        return INGREDIENT_LOOKUP[normalised]
-
-    # 2. Check if any DB key is contained in the name, or vice versa
-    for key, record in INGREDIENT_LOOKUP.items():
-        # Substring containment (either direction)
-        if key in normalised or normalised in key:
-            return record
-
-    # 3. Fuzzy sequence matching
-    best_score = 0
-    best_record = None
-    for key, record in INGREDIENT_LOOKUP.items():
-        score = SequenceMatcher(None, normalised, key).ratio()
-        if score > best_score:
-            best_score = score
-            best_record = record
-
-    if best_score >= threshold:
-        return best_record
-
-    return None
-
-
-def retrieve_knowledge(ingredient_names):
-    """
-    Given a list of ingredient names from the label,
-    retrieve matching records from data.json.
-    Returns (matched_records, unmatched_names).
-    """
-    matched = []
-    unmatched = []
-    seen_ids = set()
-
-    for name in ingredient_names:
-        record = fuzzy_match_ingredient(name)
-        if record and record["id"] not in seen_ids:
-            matched.append(record)
-            seen_ids.add(record["id"])
-        elif record is None:
-            unmatched.append(name)
-
-    return matched, unmatched
 
 
 # ---------------------------------------------------------------------------
@@ -231,10 +156,9 @@ def index():
 @app.route("/analyze", methods=["POST"])
 def analyze():
     """
-    RAG-powered analysis:
+    Two-pass analysis:
       1. Extract ingredients from label via Gemini Vision
-      2. Retrieve matching knowledge from data.json
-      3. Generate grounded health report via Gemini
+      2. Generate a health report using the full knowledge base as context
     """
 
     if "image" not in request.files:
@@ -260,7 +184,7 @@ def analyze():
         model = genai.GenerativeModel("gemini-2.5-flash")
 
         # ── PASS 1: Extract ingredients from the image ──────────────────
-        print("[RAG] Pass 1: Extracting ingredients from label...")
+        print("[SCAN] Pass 1: Extracting ingredients from label...")
         extract_response = model.generate_content(
             [EXTRACT_PROMPT, image_part],
             generation_config=genai.types.GenerationConfig(
@@ -271,7 +195,7 @@ def analyze():
         )
 
         raw_extract = extract_response.text.strip()
-        print(f"[RAG] Extracted raw: {raw_extract[:500]}")
+        print(f"[SCAN] Extracted raw: {raw_extract[:500]}")
 
         ingredients_list = _parse_json_response(raw_extract)
 
@@ -280,20 +204,11 @@ def analyze():
 
         # Clean up: ensure all items are strings
         ingredients_list = [str(i).strip() for i in ingredients_list if i]
-        print(f"[RAG] Found {len(ingredients_list)} ingredients: {ingredients_list}")
+        print(f"[SCAN] Found {len(ingredients_list)} ingredients: {ingredients_list}")
 
-        # ── RETRIEVAL: Match against data.json ──────────────────────────
-        matched_records, unmatched_names = retrieve_knowledge(ingredients_list)
-        print(
-            f"[RAG] Matched: {len(matched_records)} | "
-            f"Unmatched: {len(unmatched_names)} ({unmatched_names})"
-        )
-
-        # ── PASS 2: Generate grounded health report ─────────────────────
-        analysis_prompt = build_analysis_prompt(
-            ingredients_list, matched_records, unmatched_names
-        )
-        print("[RAG] Pass 2: Generating augmented health report...")
+        # ── PASS 2: Generate health report with full knowledge base ─────
+        analysis_prompt = build_analysis_prompt(ingredients_list)
+        print("[SCAN] Pass 2: Generating health report...")
 
         analysis_response = model.generate_content(
             [analysis_prompt, image_part],
@@ -305,7 +220,7 @@ def analyze():
         )
 
         raw_analysis = analysis_response.text.strip()
-        print(f"[RAG] Analysis raw: {raw_analysis[:500]}")
+        print(f"[SCAN] Analysis raw: {raw_analysis[:500]}")
 
         result = _parse_json_response(raw_analysis)
 
@@ -314,14 +229,6 @@ def analyze():
             return jsonify({"error": "Gemini returned incomplete data. Please try again."}), 502
 
         result["score"] = max(0, min(10, int(result["score"])))
-
-        # Add RAG metadata to the response
-        result["rag_stats"] = {
-            "total_ingredients_found": len(ingredients_list),
-            "matched_in_database": len(matched_records),
-            "not_in_database": len(unmatched_names),
-            "ingredients_extracted": ingredients_list,
-        }
 
         return jsonify(result)
 

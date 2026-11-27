@@ -8,6 +8,7 @@
   "use strict";
 
   // ── DOM refs ──────────────────────────────────────────────────────────
+  const uploadCard = document.querySelector(".upload-card");
   const dropzone = document.getElementById("dropzone");
   const fileInput = document.getElementById("fileInput");
   const previewArea = document.getElementById("previewArea");
@@ -26,12 +27,6 @@
   const verdictBadge = document.getElementById("verdictBadge");
   const reportText = document.getElementById("reportText");
   const scanAgainBtn = document.getElementById("scanAgainBtn");
-
-  // RAG-specific
-  const ragStats = document.getElementById("ragStats");
-  const ragTotal = document.getElementById("ragTotal");
-  const ragMatched = document.getElementById("ragMatched");
-  const ragUnmatched = document.getElementById("ragUnmatched");
   const ingredientsList = document.getElementById("ingredientsList");
   const ingredientsCard = document.getElementById("ingredientsCard");
 
@@ -165,10 +160,10 @@
   // ── Risk level helpers ────────────────────────────────────────────────
   const riskIcon = (risk) => {
     switch ((risk || "").toLowerCase()) {
-      case "good": return "✅";
-      case "moderate": return "⚠️";
-      case "bad": return "🚫";
-      default: return "ℹ️";
+      case "good": return '<span class="material-symbols-outlined">check_circle</span>';
+      case "moderate": return '<span class="material-symbols-outlined">warning</span>';
+      case "bad": return '<span class="material-symbols-outlined">block</span>';
+      default: return '<span class="material-symbols-outlined">info</span>';
     }
   };
 
@@ -241,18 +236,6 @@
     });
   };
 
-  // ── Render RAG stats ─────────────────────────────────────────────────
-  const renderRagStats = (stats) => {
-    if (!stats) {
-      ragStats.style.display = "none";
-      return;
-    }
-    ragStats.style.display = "flex";
-    animateNumber(ragTotal, stats.total_ingredients_found || 0);
-    animateNumber(ragMatched, stats.matched_in_database || 0);
-    animateNumber(ragUnmatched, stats.not_in_database || 0);
-  };
-
   const animateNumber = (el, target) => {
     let current = 0;
     const step = () => {
@@ -316,12 +299,12 @@
 
       reportText.textContent = data.report;
 
-      // RAG-specific rendering
-      renderRagStats(data.rag_stats);
+      // Render details
       renderIngredients(data.ingredients_detail);
 
       hide(loader);
       stopLoaderAnimation();
+      uploadCard.style.display = "none";
       show(resultSection);
       analyzeBtn.disabled = false;
       analyzeBtnTxt.textContent = "Analyze Label";
@@ -345,6 +328,7 @@
     fileInput.value = "";
     hide(previewArea);
     dropzone.style.display = "";
+    uploadCard.style.display = "";
     hide(resultSection);
     hide(errorCard);
     window.scrollTo({ top: 0, behavior: "smooth" });

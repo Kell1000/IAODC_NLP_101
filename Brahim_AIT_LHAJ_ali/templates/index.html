@@ -9,6 +9,8 @@
   <title>FoodSafetyScanner — AI Food Label Analysis</title>
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥦</text></svg>" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   <link rel="stylesheet" href="/static/style.css" />
 </head>
 
@@ -27,7 +29,7 @@
     <section class="upload-card" aria-label="Upload food label image">
       <div class="dropzone" id="dropzone">
         <input type="file" id="fileInput" accept="image/png,image/jpeg,image/webp" />
-        <span class="dropzone__icon" aria-hidden="true">📸</span>
+        <span class="dropzone__icon material-symbols-outlined" aria-hidden="true">photo_camera</span>
         <p class="dropzone__text">
           <strong>Drag & drop</strong> your food label photo here<br>
           or <strong>click to browse</strong>
@@ -65,23 +67,7 @@
     <!-- ───── Result ───── -->
     <section class="result" id="resultSection" aria-label="Analysis results">
 
-      <!-- RAG Stats Badge -->
-      <div class="rag-stats" id="ragStats">
-        <div class="rag-stats__item">
-          <span class="rag-stats__number" id="ragTotal">0</span>
-          <span class="rag-stats__label">Ingredients Found</span>
-        </div>
-        <div class="rag-stats__divider"></div>
-        <div class="rag-stats__item">
-          <span class="rag-stats__number rag-stats__number--matched" id="ragMatched">0</span>
-          <span class="rag-stats__label">In Database</span>
-        </div>
-        <div class="rag-stats__divider"></div>
-        <div class="rag-stats__item">
-          <span class="rag-stats__number rag-stats__number--unmatched" id="ragUnmatched">0</span>
-          <span class="rag-stats__label">Unknown</span>
-        </div>
-      </div>
+
 
       <!-- Score gauge -->
       <div class="score-section">
@@ -101,7 +87,7 @@
       <!-- Report card -->
       <div class="report-card">
         <h2 class="report-card__heading">
-          <span aria-hidden="true">📋</span> Detailed Report
+          <span class="material-symbols-outlined" aria-hidden="true">assignment</span> Detailed Report
         </h2>
         <p class="report-card__text" id="reportText"></p>
       </div>
@@ -109,7 +95,7 @@
       <!-- Ingredients breakdown -->
       <div class="ingredients-card" id="ingredientsCard">
         <h2 class="ingredients-card__heading">
-          <span aria-hidden="true">🧪</span> Ingredient Breakdown
+          <span class="material-symbols-outlined" aria-hidden="true">science</span> Ingredient Breakdown
         </h2>
         <div class="ingredients-list" id="ingredientsList"></div>
       </div>
